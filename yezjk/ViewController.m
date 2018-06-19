@@ -23,6 +23,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.dataArray = [NSMutableArray array];
+    NSArray *titles2 =@[@"海星",@"大熊猫",@"豹",@"狮子",@"老虎",@"狼",@"狐狸",@"考拉",@"松鼠",
+                         @"老鼠",@"刺猬",@"猪",@"鸭子",@"兔子",@"小鸡",@"狗",@"猫",@"瓢虫",
+                         @"蜜蜂",@"蚂蚁",@"苍蝇",@"蜻蜓",@"蝴蝶",@"青蛙",@"乌龟",@"水母",@"金鱼",
+                         @"龙虾",@"螃蟹",@"海豚",@"孔雀",@"啄木鸟",@"鹦鹉",@"猫头鹰",@"企鹅",@"天鹅"
+                        ,@"蛇",@"变色龙",@"骆驼",@"长颈鹿",@"犀牛",@"斑马",@"大象",@"黑猩猩",@"马",
+                        @"奶牛",@"山羊",@"猴子"];
+    NSArray *englishtTitles2 = @[@"starfish",@"panda",@"leopard",@"lion",@"tiger",@"wolf",@"fox",@"koala",@"squirrel",
+                         @"mouse",@"hedgehog",@"pig",@"duck",@"rabbit",@"chick",@"dog",@"cat",@"ladybug",
+                         @"bee",@"ant",@"fly",@"dragonfly",@"butterfly",@"frog",@"tortoise",@"jellyfish",@"goldfish",
+                        @"lobster",@"crab",@"dolphin",@"peacock",@"woodpecker",@"parrot",@"owl",@"penguin",@"swan",
+                       @"snack",@"chameleon",@"camel",@"giraffe",@"rhinoceros",@"zebra",@"elephant",@"chimpanzee",@"horse",
+                                 @"cow",@"goat",@"monkey"];
+    
     NSArray *titles = @[@"苹果",@"香蕉",@"草莓",@"葡萄",@"橙子",@"樱桃",@"柠檬",@"菠萝",@"西瓜",
                         @"哈密瓜",@"芒果",@"梨",@"蓝莓",@"荔枝",@"李子",@"榴莲",@"猕猴桃",@"木瓜",
                         @"石榴",@"柿子",@"杨桃",@"无花果",@"杏",@"杨梅",@"火龙果",@"山竹",@"百香果",
