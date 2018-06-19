@@ -9,6 +9,15 @@
 #ifndef yezjk_pch
 #define yezjk_pch
 
+#import <BlocksKit.h>
+#import <BlocksKit+UIKit.h>
+#import <QMUIKit/QMUIKit.h>
+#import <YYKit.h>
+#import <Masonry.h>
+#import <GoogleMobileAds/GoogleMobileAds.h>
+#import <FDFullscreenPopGesture/UINavigationController+FDFullscreenPopGesture.h>
+#import <ReactiveObjC.h>
+#import "PicModel.h"
 
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.

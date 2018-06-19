@@ -8,5 +8,9 @@ pod 'JQFMDB'
 pod 'QMUIKit', '~> 1.7.6'
 pod 'iCarousel', '~> 1.8.3'
 pod 'YYKit', '~> 1.0.9'
+pod 'Masonry', '~> 1.0.2'
+pod 'Google-Mobile-Ads-SDK'
+pod 'FDFullscreenPopGesture', '1.1'
+pod 'ReactiveObjC', '~> 2.1.2'
 
 end

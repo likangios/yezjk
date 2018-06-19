@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "BDSSpeechSynthesizer.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,29 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    // 设置apiKey和secretKey
+    [[BDSSpeechSynthesizer sharedInstance] setApiKey:@"lCyghXZxsaSbkKGpaFMfrVSz" withSecretKey:@"lIfZjBoyo2Y3GHdQI1DuFA30jvzdSbqq"];
+    // 设置离线引擎
+    NSString *ChineseSpeechData = [[NSBundle mainBundle] pathForResource:@"Chinese_Speech_Female" ofType:@"dat"];
+    NSString *ChineseTextData = [[NSBundle mainBundle] pathForResource:@"Chinese_text" ofType:@"dat"];
+    NSString *EnglishSpeechData = [[NSBundle mainBundle] pathForResource:@"English_Speech_Female" ofType:@"dat"];
+    NSString *EnglishTextData = [[NSBundle mainBundle] pathForResource:@"English_text" ofType:@"dat"];
+    NSString *LicenseData = [[NSBundle mainBundle] pathForResource:@"bdtts_license" ofType:@"dat"];
+    
+    NSError *loadErr = [[BDSSpeechSynthesizer sharedInstance] loadOfflineEngine:ChineseTextData speechDataPath:ChineseSpeechData licenseFilePath:LicenseData withAppCode:nil];
+    
+    if(loadErr != nil)
+    {
+        // 处理出错状况
+    }
+    // 加载英文资源
+    loadErr = [[BDSSpeechSynthesizer sharedInstance] loadEnglishDataForOfflineEngine:EnglishTextData speechData:EnglishSpeechData];
+    if(loadErr != nil)
+    {
+        // 处理出错状况
+    }
+    [[BDSSpeechSynthesizer sharedInstance] setSynthParam:@(6) forKey:BDS_SYNTHESIZER_PARAM_VOLUME];
+    
     return YES;
 }
 
