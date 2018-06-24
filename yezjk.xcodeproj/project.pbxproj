@@ -10,6 +10,8 @@
 		0BDABF6A612FC4643E071107 /* libPods-yezjk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FC2143B70C1408456A365ECC /* libPods-yezjk.a */; };
 		7949630620D8E7F200F90B21 /* PicPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7949630520D8E7F200F90B21 /* PicPageViewController.m */; };
 		7949630920D8E87C00F90B21 /* PicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7949630820D8E87C00F90B21 /* PicViewController.m */; };
+		840E535620DF98F400942AFE /* LUCKDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 840E535520DF98F400942AFE /* LUCKDBManager.m */; };
+		840E535920DF9A2E00942AFE /* LUCKStoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 840E535820DF9A2E00942AFE /* LUCKStoryModel.m */; };
 		84E280CC20D72F480072A8A4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E280CB20D72F480072A8A4 /* AppDelegate.m */; };
 		84E280CF20D72F480072A8A4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E280CE20D72F480072A8A4 /* ViewController.m */; };
 		84E280D220D72F480072A8A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84E280D020D72F480072A8A4 /* Main.storyboard */; };
@@ -81,6 +83,10 @@
 		7949630720D8E87C00F90B21 /* PicViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PicViewController.h; sourceTree = "<group>"; };
 		7949630820D8E87C00F90B21 /* PicViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PicViewController.m; sourceTree = "<group>"; };
 		840E535320D7C4F500942AFE /* yezjk.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = yezjk.pch; sourceTree = "<group>"; };
+		840E535420DF98F400942AFE /* LUCKDBManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LUCKDBManager.h; sourceTree = "<group>"; };
+		840E535520DF98F400942AFE /* LUCKDBManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LUCKDBManager.m; sourceTree = "<group>"; };
+		840E535720DF9A2E00942AFE /* LUCKStoryModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LUCKStoryModel.h; sourceTree = "<group>"; };
+		840E535820DF9A2E00942AFE /* LUCKStoryModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LUCKStoryModel.m; sourceTree = "<group>"; };
 		84E280C720D72F470072A8A4 /* yezjk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = yezjk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84E280CA20D72F480072A8A4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		84E280CB20D72F480072A8A4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -226,12 +232,16 @@
 				84E280CB20D72F480072A8A4 /* AppDelegate.m */,
 				84E280CD20D72F480072A8A4 /* ViewController.h */,
 				84E280CE20D72F480072A8A4 /* ViewController.m */,
+				840E535420DF98F400942AFE /* LUCKDBManager.h */,
+				840E535520DF98F400942AFE /* LUCKDBManager.m */,
 				7949630420D8E7F200F90B21 /* PicPageViewController.h */,
 				7949630520D8E7F200F90B21 /* PicPageViewController.m */,
 				7949630720D8E87C00F90B21 /* PicViewController.h */,
 				7949630820D8E87C00F90B21 /* PicViewController.m */,
 				84E2817020D76E250072A8A4 /* PicModel.h */,
 				84E2817120D76E260072A8A4 /* PicModel.m */,
+				840E535720DF9A2E00942AFE /* LUCKStoryModel.h */,
+				840E535820DF9A2E00942AFE /* LUCKStoryModel.m */,
 				84E280D020D72F480072A8A4 /* Main.storyboard */,
 				84E280D320D72F480072A8A4 /* Assets.xcassets */,
 				84E280D520D72F480072A8A4 /* LaunchScreen.storyboard */,
@@ -457,6 +467,7 @@
 		84E280BF20D72F470072A8A4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = LUCK;
 				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = luck;
 				TargetAttributes = {
@@ -570,8 +581,7 @@
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/QMUIResources.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/QMUI_QQEmotion.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -601,8 +611,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				84E280CF20D72F480072A8A4 /* ViewController.m in Sources */,
+				840E535620DF98F400942AFE /* LUCKDBManager.m in Sources */,
 				7949630920D8E87C00F90B21 /* PicViewController.m in Sources */,
 				84E280DA20D72F480072A8A4 /* main.m in Sources */,
+				840E535920DF9A2E00942AFE /* LUCKStoryModel.m in Sources */,
 				84E2817220D76E260072A8A4 /* PicModel.m in Sources */,
 				7949630620D8E7F200F90B21 /* PicPageViewController.m in Sources */,
 				84E280CC20D72F480072A8A4 /* AppDelegate.m in Sources */,

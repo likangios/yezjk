@@ -9,9 +9,11 @@
 #import "PicPageViewController.h"
 #import "PicViewController.h"
 
-@interface PicPageViewController ()<UIPageViewControllerDelegate,UIPageViewControllerDataSource>
+@interface PicPageViewController ()<UIPageViewControllerDelegate,UIPageViewControllerDataSource,UIScrollViewDelegate>
 
 @property(nonatomic,strong) UIPageViewController   *pageController;
+
+@property(nonatomic,strong) PicViewController *currentPicViewController;
 
 @end
 
@@ -35,6 +37,8 @@
     self.view.backgroundColor =[UIColor whiteColor];
     PicViewController *vc = (PicViewController *)[self getViewControllerWithIndex:0];
     if (vc) {
+        [vc speakMehtod];
+        self.currentPicViewController = vc;
         self.view.backgroundColor = [[UIImage imageNamed:vc.model.imageName] qmui_averageColor];
         [self.pageController setViewControllers:@[vc] direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:NULL];
     }
@@ -43,6 +47,17 @@
     [self.pageController.view mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.view);
     }];
+    UIButton *back = [UIButton buttonWithType:UIButtonTypeCustom];
+    [back setImage:[UIImage imageNamed:@"nav_back"] forState:UIControlStateNormal];
+    [self.view addSubview:back];
+    [back mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.top.mas_equalTo(15);
+        make.size.mas_equalTo(CGSizeMake(50, 30));
+    }];
+    [[back rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+        [self.navigationController popViewControllerAnimated:YES];
+    }];
+    
 }
 - (UIViewController *)getViewControllerWithIndex:(NSInteger)index{
     if (index >= self.dataArray.count || index < 0) {
@@ -74,13 +89,26 @@
 }
 - (void)pageViewController:(UIPageViewController *)pageViewController didFinishAnimating:(BOOL)finished previousViewControllers:(NSArray<UIViewController *> *)previousViewControllers transitionCompleted:(BOOL)completed{
     PicViewController *vc = (PicViewController *)pageViewController.viewControllers[0];
+    if (vc == self.currentPicViewController) {
+        return;
+    }
+    [vc speakMehtod];
+    self.currentPicViewController = vc;
     self.view.backgroundColor = [[UIImage imageNamed:vc.model.imageName] qmui_averageColor];
 }
+- (void)pageViewController:(UIPageViewController *)pageViewController willTransitionToViewControllers:(NSArray<UIViewController *> *)pendingViewControllers{
+    NSLog(@"willTransitionToViewControllers");
 
-
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    NSLog(@"滑动了:(%.f,%.f)",scrollView.contentOffset.x,scrollView.contentOffset.y);
+}
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
+    NSLog(@"停下来了");
 }
 
 /*

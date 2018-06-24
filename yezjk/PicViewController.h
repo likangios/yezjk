@@ -9,6 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface PicViewController : UIViewController
+
 @property(nonatomic,strong) PicModel *model;
 
+@property(nonatomic,copy) void (^showHiddenNavbarBlocks)(void);
+
+- (void)speakMehtod;
 @end

@@ -39,7 +39,7 @@
     {
         // 处理出错状况
     }
-    [[BDSSpeechSynthesizer sharedInstance] setSynthParam:@(6) forKey:BDS_SYNTHESIZER_PARAM_VOLUME];
+    [[BDSSpeechSynthesizer sharedInstance] setSynthParam:@(9) forKey:BDS_SYNTHESIZER_PARAM_VOLUME];
     
     return YES;
 }
