@@ -31,6 +31,8 @@ static LUCKDBManager *sharedInstance = nil;
     return sharedInstance;
 }
 -(void)creatData{
+    
+    
     if (![self lookupAllPicModelWithType:@1].count) {
         NSArray *array = [self getDataArrayWithType:1];
         [array enumerateObjectsUsingBlock:^(PicModel * obj, NSUInteger idx, BOOL * _Nonnull stop) {
@@ -205,6 +207,39 @@ static LUCKDBManager *sharedInstance = nil;
     }
     return @[];
 }
+#pragma mark - 故事
 
+- (BOOL)insertStoryModel:(LUCKStoryModel *)model
+{
+    __block BOOL success = NO;
+    
+    LUCKStoryModel *data = [self lookupStoryModel:model.picId];
+    if (data) {
+        [self.fmdb jq_inDatabase:^{
+            success = [self.fmdb jq_updateTable:storyTableName dicOrModel:model whereFormat:[NSString stringWithFormat:@"where picId = '%@'",model.picId]];
+        }];
+    }else{
+        [self.fmdb jq_inDatabase:^{
+            success = [self.fmdb jq_insertTable:storyTableName dicOrModel:model];
+        }];
+    }
+    if (!success) {
+        NSLog(@"保存图片失败");
+    }
+    return success;
+}
 
+- (LUCKStoryModel *)lookupStoryModel:(NSString *)Id
+{
+    __block NSArray *resultArray = [NSArray array];
+    [self.fmdb jq_inDatabase:^{
+        NSString *splString = [NSString stringWithFormat:@"where picId = '%@'",Id];
+        resultArray = [self.fmdb jq_lookupTable:storyTableName dicOrModel:[PicModel class] whereFormat:splString];
+    }];
+    LUCKStoryModel *message = nil;
+    if (resultArray.count > 0) {
+        message = resultArray[0];
+    }
+    return message;
+}
 @end

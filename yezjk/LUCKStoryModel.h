@@ -21,6 +21,10 @@
  内容
  */
 @property(nonatomic,strong) NSString *content;
+/**
+
+ */
+@property(nonatomic,strong) NSString *comment;
 
 /**
  图片类型 1=爸爸故事，2=妈妈故事，
