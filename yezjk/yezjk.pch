@@ -15,11 +15,12 @@
 #import <YYKit.h>
 #import <Masonry.h>
 #import <GoogleMobileAds/GoogleMobileAds.h>
-#import <FDFullscreenPopGesture/UINavigationController+FDFullscreenPopGesture.h>
+//#import <FDFullscreenPopGesture/UINavigationController+FDFullscreenPopGesture.h>
 #import <ReactiveObjC.h>
 #import "PicModel.h"
 #import "LUCKStoryModel.h"
 #import "LUCKDBManager.h"
+#import <AipOcrSdk/AipOcrSdk.h>
 
 #import <JQFMDB.h>
 

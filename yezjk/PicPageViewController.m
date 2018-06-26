@@ -19,6 +19,15 @@
 
 @implementation PicPageViewController
 
+-(UIInterfaceOrientation)preferredInterfaceOrientationForPresentation{
+    return UIInterfaceOrientationLandscapeLeft;
+}
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+    return (interfaceOrientation == UIInterfaceOrientationLandscapeLeft ||
+
+            interfaceOrientation == UIInterfaceOrientationLandscapeRight );
+}
 - (UIPageViewController *)pageController{
     if (!_pageController) {
         _pageController = [[UIPageViewController alloc]initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];;
@@ -32,7 +41,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.fd_prefersNavigationBarHidden = YES;
+//    self.fd_prefersNavigationBarHidden = YES;
     
     self.view.backgroundColor =[UIColor whiteColor];
     PicViewController *vc = (PicViewController *)[self getViewControllerWithIndex:0];

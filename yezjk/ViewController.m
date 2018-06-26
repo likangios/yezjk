@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "PicPageViewController.h"
 #import "PicModel.h"
-#import <YYKit.h>
+#import "LUCKAddStoryViewController.h"
 
 
 
@@ -24,11 +24,12 @@
 @end
 
 @implementation ViewController
-
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [[AipOcrService shardService] authWithAK:@"jpEHyoIXNhIRBgTlmq0YxAWh" andSK:@"yR21yYveogECkHYOXreITgBH5Ly6KiFW"];
+
     [[LUCKDBManager sharedInstance] creatData];
-    self.fd_prefersNavigationBarHidden = YES;
+//    self.fd_prefersNavigationBarHidden = YES;
     self.view.backgroundColor = [UIColor whiteColor];
     
     UIImageView *imageview= [[ UIImageView alloc]init];
@@ -58,25 +59,31 @@
         make.right.bottom.mas_equalTo(-15);
         make.size.mas_equalTo(CGSizeMake(130, 40));
     }];
-//
+    @weakify(self);
     [[self.topButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+        @strongify(self);
         PicPageViewController *page = [[PicPageViewController alloc]init];
         page.dataArray = [[LUCKDBManager sharedInstance] lookupAllPicModelWithType:@1];
         [self.navigationController pushViewController:page animated:YES];
     }];
     [[self.bottomButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+        @strongify(self);
         PicPageViewController *page = [[PicPageViewController alloc]init];
         page.dataArray = [[LUCKDBManager sharedInstance] lookupAllPicModelWithType:@2];
         [self.navigationController pushViewController:page animated:YES];
     }];
     
     [[self.myStoreButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+        @strongify(self);
         PicPageViewController *page = [[PicPageViewController alloc]init];
         page.dataArray = [[LUCKDBManager sharedInstance] lookupAllStorePicModel];
         [self.navigationController pushViewController:page animated:YES];
     }];
-    
-    
+
+}
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    LUCKAddStoryViewController *add = [[LUCKAddStoryViewController alloc]init];
+    [self.navigationController pushViewController:add animated:YES];
 }
 - (UIButton *)topButton{
     if (!_topButton) {

@@ -31,6 +31,16 @@
 		840E537D20E06F1700942AFE /* IMG_0474.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 840E536F20E06F1400942AFE /* IMG_0474.JPG */; };
 		840E537E20E06F1700942AFE /* IMG_0466.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 840E537020E06F1500942AFE /* IMG_0466.JPG */; };
 		840E537F20E06F1700942AFE /* IMG_0476.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 840E537120E06F1500942AFE /* IMG_0476.JPG */; };
+		84CCFCFD20E2594B00563EA6 /* AipBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84CCFCFA20E2594B00563EA6 /* AipBase.framework */; };
+		84CCFCFE20E2594B00563EA6 /* AipOcrSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84CCFCFB20E2594B00563EA6 /* AipOcrSdk.framework */; };
+		84CCFCFF20E2594B00563EA6 /* IdcardQuality.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84CCFCFC20E2594B00563EA6 /* IdcardQuality.framework */; };
+		84CCFD0020E2595200563EA6 /* AipBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84CCFCFA20E2594B00563EA6 /* AipBase.framework */; };
+		84CCFD0120E2595200563EA6 /* AipBase.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 84CCFCFA20E2594B00563EA6 /* AipBase.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		84CCFD0320E2595600563EA6 /* AipOcrSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84CCFCFB20E2594B00563EA6 /* AipOcrSdk.framework */; };
+		84CCFD0420E2595600563EA6 /* AipOcrSdk.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 84CCFCFB20E2594B00563EA6 /* AipOcrSdk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		84CCFD0520E2595900563EA6 /* IdcardQuality.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84CCFCFC20E2594B00563EA6 /* IdcardQuality.framework */; };
+		84CCFD0620E2595900563EA6 /* IdcardQuality.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 84CCFCFC20E2594B00563EA6 /* IdcardQuality.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		84CCFD4620E2F6DF00563EA6 /* LUCKAddStoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CCFD4520E2F6DF00563EA6 /* LUCKAddStoryViewController.m */; };
 		84E280CC20D72F480072A8A4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E280CB20D72F480072A8A4 /* AppDelegate.m */; };
 		84E280CF20D72F480072A8A4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E280CE20D72F480072A8A4 /* ViewController.m */; };
 		84E280D220D72F480072A8A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84E280D020D72F480072A8A4 /* Main.storyboard */; };
@@ -95,6 +105,22 @@
 		84E2817220D76E260072A8A4 /* PicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E2817120D76E260072A8A4 /* PicModel.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		84CCFD0220E2595300563EA6 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				84CCFD0120E2595200563EA6 /* AipBase.framework in Embed Frameworks */,
+				84CCFD0420E2595600563EA6 /* AipOcrSdk.framework in Embed Frameworks */,
+				84CCFD0620E2595900563EA6 /* IdcardQuality.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		3853B0E28FA4E0E123D80DF6 /* Pods-yezjk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yezjk.release.xcconfig"; path = "Pods/Target Support Files/Pods-yezjk/Pods-yezjk.release.xcconfig"; sourceTree = "<group>"; };
 		7949630420D8E7F200F90B21 /* PicPageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PicPageViewController.h; sourceTree = "<group>"; };
@@ -125,6 +151,11 @@
 		840E536F20E06F1400942AFE /* IMG_0474.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_0474.JPG; sourceTree = "<group>"; };
 		840E537020E06F1500942AFE /* IMG_0466.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_0466.JPG; sourceTree = "<group>"; };
 		840E537120E06F1500942AFE /* IMG_0476.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_0476.JPG; sourceTree = "<group>"; };
+		84CCFCFA20E2594B00563EA6 /* AipBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AipBase.framework; sourceTree = "<group>"; };
+		84CCFCFB20E2594B00563EA6 /* AipOcrSdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AipOcrSdk.framework; sourceTree = "<group>"; };
+		84CCFCFC20E2594B00563EA6 /* IdcardQuality.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IdcardQuality.framework; sourceTree = "<group>"; };
+		84CCFD4420E2F6DF00563EA6 /* LUCKAddStoryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LUCKAddStoryViewController.h; sourceTree = "<group>"; };
+		84CCFD4520E2F6DF00563EA6 /* LUCKAddStoryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LUCKAddStoryViewController.m; sourceTree = "<group>"; };
 		84E280C720D72F470072A8A4 /* yezjk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = yezjk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84E280CA20D72F480072A8A4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		84E280CB20D72F480072A8A4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -228,20 +259,36 @@
 				84E2816C20D735D70072A8A4 /* AVFoundation.framework in Frameworks */,
 				84E2816B20D735D00072A8A4 /* AudioToolbox.framework in Frameworks */,
 				84E2816A20D735C90072A8A4 /* SystemConfiguration.framework in Frameworks */,
+				84CCFCFD20E2594B00563EA6 /* AipBase.framework in Frameworks */,
+				84CCFD0320E2595600563EA6 /* AipOcrSdk.framework in Frameworks */,
 				84E2816320D733390072A8A4 /* GLKit.framework in Frameworks */,
 				84E2815D20D733100072A8A4 /* libiconv.2.4.0.tbd in Frameworks */,
 				84E2816120D733240072A8A4 /* libz.1.2.5.tbd in Frameworks */,
 				84E2815F20D7331B0072A8A4 /* libc++.tbd in Frameworks */,
 				84E2815920D733000072A8A4 /* libsqlite3.0.tbd in Frameworks */,
+				84CCFD0020E2595200563EA6 /* AipBase.framework in Frameworks */,
+				84CCFCFF20E2594B00563EA6 /* IdcardQuality.framework in Frameworks */,
+				84CCFD0520E2595900563EA6 /* IdcardQuality.framework in Frameworks */,
 				84E2815B20D733090072A8A4 /* libstdc++.6.0.9.tbd in Frameworks */,
 				84E280FF20D72FF90072A8A4 /* libBaiduSpeechSDK.a in Frameworks */,
 				0BDABF6A612FC4643E071107 /* libPods-yezjk.a in Frameworks */,
+				84CCFCFE20E2594B00563EA6 /* AipOcrSdk.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		84CCFCF920E2594B00563EA6 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				84CCFCFA20E2594B00563EA6 /* AipBase.framework */,
+				84CCFCFB20E2594B00563EA6 /* AipOcrSdk.framework */,
+				84CCFCFC20E2594B00563EA6 /* IdcardQuality.framework */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
 		84E280BE20D72F470072A8A4 = {
 			isa = PBXGroup;
 			children = (
@@ -263,6 +310,7 @@
 		84E280C920D72F470072A8A4 /* yezjk */ = {
 			isa = PBXGroup;
 			children = (
+				84CCFCF920E2594B00563EA6 /* lib */,
 				84E2810020D730040072A8A4 /* BDSClientResource */,
 				84E280FB20D72FF90072A8A4 /* BDSClientLib */,
 				84E280E020D72FEE0072A8A4 /* BDSClientHeaders */,
@@ -270,6 +318,8 @@
 				84E280CB20D72F480072A8A4 /* AppDelegate.m */,
 				84E280CD20D72F480072A8A4 /* ViewController.h */,
 				84E280CE20D72F480072A8A4 /* ViewController.m */,
+				84CCFD4420E2F6DF00563EA6 /* LUCKAddStoryViewController.h */,
+				84CCFD4520E2F6DF00563EA6 /* LUCKAddStoryViewController.m */,
 				840E535420DF98F400942AFE /* LUCKDBManager.h */,
 				840E535520DF98F400942AFE /* LUCKDBManager.m */,
 				7949630420D8E7F200F90B21 /* PicPageViewController.h */,
@@ -508,6 +558,7 @@
 				84E280C520D72F470072A8A4 /* Resources */,
 				FEFE3D1E4362F1986A20AE0F /* [CP] Embed Pods Frameworks */,
 				B1F08E3FC30581B308358AFB /* [CP] Copy Pods Resources */,
+				84CCFD0220E2595300563EA6 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -694,6 +745,7 @@
 				84E2817220D76E260072A8A4 /* PicModel.m in Sources */,
 				7949630620D8E7F200F90B21 /* PicPageViewController.m in Sources */,
 				84E280CC20D72F480072A8A4 /* AppDelegate.m in Sources */,
+				84CCFD4620E2F6DF00563EA6 /* LUCKAddStoryViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -830,6 +882,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E5EJ3R9VNE;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/yezjk/lib",
+				);
 				GCC_PREFIX_HEADER = yezjk/yezjk.pch;
 				INFOPLIST_FILE = yezjk/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -838,7 +894,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/yezjk/BDSClientLib",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = luck.yezjk;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lk.yezjk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -851,6 +907,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E5EJ3R9VNE;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/yezjk/lib",
+				);
 				GCC_PREFIX_HEADER = yezjk/yezjk.pch;
 				INFOPLIST_FILE = yezjk/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -859,7 +919,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/yezjk/BDSClientLib",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = luck.yezjk;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lk.yezjk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

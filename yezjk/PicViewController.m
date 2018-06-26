@@ -28,12 +28,12 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.fd_prefersNavigationBarHidden = YES;
+//    self.fd_prefersNavigationBarHidden = YES;
     self.view.backgroundColor = [UIColor clearColor];
     [self.view addSubview:self.showImageView];
     [self.showImageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.center.equalTo(self.view);
-        make.size.equalTo(self.view.mas_height).multipliedBy(1);
+        make.size.mas_equalTo(MIN(CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame)));
     }];
     self.showImageView.image = [UIImage imageNamed:self.model.imageName];
     __weak typeof(self)weakSelf = self;
