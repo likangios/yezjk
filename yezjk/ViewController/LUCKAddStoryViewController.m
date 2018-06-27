@@ -47,9 +47,7 @@
         make.left.mas_equalTo(20);
         make.top.mas_equalTo(100);
         make.height.mas_equalTo(self.textView.mas_width);
-    }];
-    
-    // Do any additional setup after loading the view.
+    }];    
 }
 - (UITextField *)titleField{
     if (!_titleField) {
