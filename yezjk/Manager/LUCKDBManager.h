@@ -51,4 +51,10 @@
  */
 - (NSArray <PicModel *>*)lookupAllStorePicModel;
 
+- (BOOL)insertStoryModel:(LUCKStoryModel *)model;
+
+- (LUCKStoryModel *)lookupStoryModel:(NSString *)Id;
+
+- (NSArray <LUCKStoryModel *>*)lookupAllStoryLuckStoryModel;
+
 @end

@@ -234,7 +234,7 @@ static LUCKDBManager *sharedInstance = nil;
     __block NSArray *resultArray = [NSArray array];
     [self.fmdb jq_inDatabase:^{
         NSString *splString = [NSString stringWithFormat:@"where picId = '%@'",Id];
-        resultArray = [self.fmdb jq_lookupTable:storyTableName dicOrModel:[PicModel class] whereFormat:splString];
+        resultArray = [self.fmdb jq_lookupTable:storyTableName dicOrModel:[LUCKStoryModel class] whereFormat:splString];
     }];
     LUCKStoryModel *message = nil;
     if (resultArray.count > 0) {
@@ -242,4 +242,16 @@ static LUCKDBManager *sharedInstance = nil;
     }
     return message;
 }
+- (NSArray <LUCKStoryModel *>*)lookupAllStoryLuckStoryModel
+{
+    __block NSArray *resultArray = [NSArray array];
+    [self.fmdb jq_inDatabase:^{
+        resultArray = [self.fmdb jq_lookupTable:storyTableName dicOrModel:[LUCKStoryModel class] whereFormat:nil];
+    }];
+    if (resultArray.count) {
+        return resultArray;
+    }
+    return @[];
+}
+
 @end

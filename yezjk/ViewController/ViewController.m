@@ -19,6 +19,9 @@
 
 @property(nonatomic,strong) UIButton *bottomButton;
 
+@property(nonatomic,strong) UIButton *storyButton;
+
+
 @property(nonatomic,strong) UIButton *myStoreButton;
 
 @end
@@ -43,6 +46,7 @@
     [self.view addSubview:self.topButton];
     [self.view addSubview:self.bottomButton];
     [self.view addSubview:self.myStoreButton];
+    [self.view addSubview:self.storyButton];
 
     [self.topButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(self.view);
@@ -52,6 +56,11 @@
     [self.bottomButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(self.view);
         make.centerY.equalTo(self.view.mas_centerY).offset(40);
+        make.size.mas_equalTo(CGSizeMake(150, 50));
+    }];
+    [self.storyButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(self.view);
+        make.top.equalTo(self.bottomButton.mas_bottom).offset(20);
         make.size.mas_equalTo(CGSizeMake(150, 50));
     }];
 
@@ -79,11 +88,30 @@
         page.dataArray = [[LUCKDBManager sharedInstance] lookupAllStorePicModel];
         [self.navigationController pushViewController:page animated:YES];
     }];
+    [[self.storyButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+        NSArray *array = [[LUCKDBManager sharedInstance] lookupAllStoryLuckStoryModel];
+        NSLog(@"array.count %ld",array.count);
+    }];
 
 }
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     LUCKAddStoryViewController *add = [[LUCKAddStoryViewController alloc]init];
     [self.navigationController pushViewController:add animated:YES];
+}
+
+- (UIButton *)storyButton{
+    if (!_storyButton) {
+        _storyButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_storyButton setImage:[UIImage imageNamed:@"guoshu_normal"] forState:UIControlStateNormal];
+        [_storyButton setTitle:@"胎教故事" forState:UIControlStateNormal];
+        [_storyButton setImageEdgeInsets:UIEdgeInsetsMake(0, -5, 0, 5)];
+        [_storyButton setTitleEdgeInsets:UIEdgeInsetsMake(0, 5, 0, -5)];
+        _storyButton.titleLabel.font = [UIFont systemFontOfSize:17];
+        [_storyButton setTitleColor:[UIColor colorWithHexString:@"ffffff"] forState:UIControlStateNormal];
+        _storyButton.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.6];
+        _storyButton.layer.cornerRadius = 25.0;
+    }
+    return _storyButton;
 }
 - (UIButton *)topButton{
     if (!_topButton) {
