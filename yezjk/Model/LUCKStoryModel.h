@@ -27,6 +27,11 @@
 @property(nonatomic,strong) NSString *comment;
 
 /**
+ 分类
+ */
+@property(nonatomic,strong) NSString *category;
+
+/**
  图片类型 1=爸爸故事，2=妈妈故事，
  */
 @property(nonatomic,strong) NSNumber *type;

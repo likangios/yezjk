@@ -87,6 +87,7 @@
         model.content = self.contentTextView.text;
         model.comment = self.commentTextView.text;
         model.type = @1;
+        model.category = @"父爱";
         model.picId = @"10000";
         BOOL rect =  [[LUCKDBManager sharedInstance] insertStoryModel:model];
     }];
@@ -166,9 +167,9 @@
         NSMutableString *string = [[NSMutableString alloc]init];
         [array enumerateObjectsUsingBlock:^(NSDictionary *obj, NSUInteger idx, BOOL * _Nonnull stop) {
             [string appendString:obj[@"words"]];
-            UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
-            pasteboard.string = obj[@"words"];
         }];
+        UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
+        pasteboard.string = string;
 //        dispatch_async(dispatch_get_main_queue(), ^{
 //            self.textView.text = string;
 //        });
