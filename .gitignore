@@ -15,6 +15,7 @@ xcuserdata
 DerivedData
 *.hmap
 *.ipa
+*.a
 *.xcuserstate
 
 Coding_iOS/Coding_iOS-Prefix.pch

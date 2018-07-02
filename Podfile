@@ -13,4 +13,6 @@ pod 'Google-Mobile-Ads-SDK'
 #pod 'FDFullscreenPopGesture', '1.1'
 pod 'ReactiveObjC', '~> 2.1.2'
 pod 'IQKeyboardManager'
+pod 'MBProgressHUD', '~> 1.1.0'
+
 end

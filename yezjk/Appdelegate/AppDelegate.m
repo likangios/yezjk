@@ -20,6 +20,7 @@
     // Override point for customization after application launch.
     // 设置apiKey和secretKey
     [IQKeyboardManager sharedManager].enable = YES;
+    [IQKeyboardManager sharedManager].shouldResignOnTouchOutside = YES;
     [[BDSSpeechSynthesizer sharedInstance] setApiKey:@"lCyghXZxsaSbkKGpaFMfrVSz" withSecretKey:@"lIfZjBoyo2Y3GHdQI1DuFA30jvzdSbqq"];
     // 设置离线引擎
     NSString *ChineseSpeechData = [[NSBundle mainBundle] pathForResource:@"Chinese_Speech_Female" ofType:@"dat"];
@@ -41,6 +42,8 @@
         // 处理出错状况
     }
     [[BDSSpeechSynthesizer sharedInstance] setSynthParam:@(9) forKey:BDS_SYNTHESIZER_PARAM_VOLUME];
+    [[BDSSpeechSynthesizer sharedInstance] setSynthParam:@(4) forKey:BDS_SYNTHESIZER_PARAM_SPEED];
+    
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     return YES;
 }

@@ -7,7 +7,6 @@
 //
 
 #import "PicViewController.h"
-#import "BDSSpeechSynthesizer.h"
 
 @interface PicViewController ()<BDSSpeechSynthesizerDelegate>
 

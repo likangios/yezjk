@@ -10,6 +10,7 @@
 #import "PicPageViewController.h"
 #import "PicModel.h"
 #import "LUCKAddStoryViewController.h"
+#import "LUCKStoryListViewController.h"
 
 
 
@@ -90,6 +91,9 @@
     }];
     [[self.storyButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
         NSArray *array = [[LUCKDBManager sharedInstance] lookupAllStoryLuckStoryModel];
+        LUCKStoryListViewController *vc = [[LUCKStoryListViewController alloc]init];
+        vc.dataArray = array;
+        [self.navigationController pushViewController:vc animated:YES];
         NSLog(@"array.count %ld",array.count);
     }];
 
