@@ -11,7 +11,7 @@
 #import "PicModel.h"
 #import "LUCKAddStoryViewController.h"
 #import "LUCKStoryListViewController.h"
-
+#import "LUCKAddPicViewController.h"
 
 
 @interface ViewController ()
@@ -90,24 +90,26 @@
         [self.navigationController pushViewController:page animated:YES];
     }];
     [[self.storyButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
-        NSArray *array = [[LUCKDBManager sharedInstance] lookupAllStoryLuckStoryModel];
-        LUCKStoryListViewController *vc = [[LUCKStoryListViewController alloc]init];
-        vc.dataArray = array;
-        [self.navigationController pushViewController:vc animated:YES];
-        NSLog(@"array.count %ld",array.count);
+//        NSArray *array = [[LUCKDBManager sharedInstance] lookupAllStoryLuckStoryModel];
+//        LUCKStoryListViewController *vc = [[LUCKStoryListViewController alloc]init];
+//        vc.dataArray = array;
+//        [self.navigationController pushViewController:vc animated:YES];
+//        NSLog(@"array.count %ld",array.count);
+        LUCKAddPicViewController *add = [[LUCKAddPicViewController alloc]init];
+        [self.navigationController pushViewController:add animated:YES];
     }];
 
 }
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    LUCKAddStoryViewController *add = [[LUCKAddStoryViewController alloc]init];
-    [self.navigationController pushViewController:add animated:YES];
+//    LUCKAddStoryViewController *add = [[LUCKAddStoryViewController alloc]init];
+//    [self.navigationController pushViewController:add animated:YES];
 }
 
 - (UIButton *)storyButton{
     if (!_storyButton) {
         _storyButton = [UIButton buttonWithType:UIButtonTypeCustom];
         [_storyButton setImage:[UIImage imageNamed:@"guoshu_normal"] forState:UIControlStateNormal];
-        [_storyButton setTitle:@"胎教故事" forState:UIControlStateNormal];
+        [_storyButton setTitle:@"我的卡片" forState:UIControlStateNormal];
         [_storyButton setImageEdgeInsets:UIEdgeInsetsMake(0, -5, 0, 5)];
         [_storyButton setTitleEdgeInsets:UIEdgeInsetsMake(0, 5, 0, -5)];
         _storyButton.titleLabel.font = [UIFont systemFontOfSize:17];

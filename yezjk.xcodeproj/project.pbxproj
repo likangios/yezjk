@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0BDABF6A612FC4643E071107 /* libPods-yezjk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FC2143B70C1408456A365ECC /* libPods-yezjk.a */; };
+		7925B766216DF80C009E6531 /* LUCKAddPicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7925B765216DF80C009E6531 /* LUCKAddPicViewController.m */; };
 		7949630620D8E7F200F90B21 /* PicPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7949630520D8E7F200F90B21 /* PicPageViewController.m */; };
 		7949630920D8E87C00F90B21 /* PicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7949630820D8E87C00F90B21 /* PicViewController.m */; };
 		79D7AEE920E31D6500528F3E /* libBaiduSpeechSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 79D7AEE720E31D6400528F3E /* libBaiduSpeechSDK.a */; };
@@ -127,6 +128,8 @@
 
 /* Begin PBXFileReference section */
 		3853B0E28FA4E0E123D80DF6 /* Pods-yezjk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yezjk.release.xcconfig"; path = "Pods/Target Support Files/Pods-yezjk/Pods-yezjk.release.xcconfig"; sourceTree = "<group>"; };
+		7925B764216DF80B009E6531 /* LUCKAddPicViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LUCKAddPicViewController.h; sourceTree = "<group>"; };
+		7925B765216DF80C009E6531 /* LUCKAddPicViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LUCKAddPicViewController.m; sourceTree = "<group>"; };
 		7949630420D8E7F200F90B21 /* PicPageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PicPageViewController.h; sourceTree = "<group>"; };
 		7949630520D8E7F200F90B21 /* PicPageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PicPageViewController.m; sourceTree = "<group>"; };
 		7949630720D8E87C00F90B21 /* PicViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PicViewController.h; sourceTree = "<group>"; };
@@ -297,6 +300,8 @@
 				7949630520D8E7F200F90B21 /* PicPageViewController.m */,
 				84E280CD20D72F480072A8A4 /* ViewController.h */,
 				84E280CE20D72F480072A8A4 /* ViewController.m */,
+				7925B764216DF80B009E6531 /* LUCKAddPicViewController.h */,
+				7925B765216DF80C009E6531 /* LUCKAddPicViewController.m */,
 				84CCFD4420E2F6DF00563EA6 /* LUCKAddStoryViewController.h */,
 				84CCFD4520E2F6DF00563EA6 /* LUCKAddStoryViewController.m */,
 				84CCFD4720E7077600563EA6 /* LUCKStoryListViewController.h */,
@@ -638,7 +643,6 @@
 				84E280C320D72F470072A8A4 /* Sources */,
 				84E280C420D72F470072A8A4 /* Frameworks */,
 				84E280C520D72F470072A8A4 /* Resources */,
-				FEFE3D1E4362F1986A20AE0F /* [CP] Embed Pods Frameworks */,
 				B1F08E3FC30581B308358AFB /* [CP] Copy Pods Resources */,
 				84CCFD0220E2595300563EA6 /* Embed Frameworks */,
 			);
@@ -792,26 +796,13 @@
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IQKeyboardManager.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/QMUIResources.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/QMUI_QQEmotion.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-yezjk/Pods-yezjk-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		FEFE3D1E4362F1986A20AE0F /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-yezjk/Pods-yezjk-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -822,6 +813,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84E280CF20D72F480072A8A4 /* ViewController.m in Sources */,
+				7925B766216DF80C009E6531 /* LUCKAddPicViewController.m in Sources */,
 				840E535620DF98F400942AFE /* LUCKDBManager.m in Sources */,
 				84CCFD4E20E8D8AA00563EA6 /* MBProgressHUD+JKDSMB.m in Sources */,
 				7949630920D8E87C00F90B21 /* PicViewController.m in Sources */,

@@ -42,6 +42,20 @@ DEPENDENCIES:
   - ReactiveObjC (~> 2.1.2)
   - YYKit (~> 1.0.9)
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - BlocksKit
+    - FMDB
+    - Google-Mobile-Ads-SDK
+    - iCarousel
+    - IQKeyboardManager
+    - JQFMDB
+    - Masonry
+    - MBProgressHUD
+    - QMUIKit
+    - ReactiveObjC
+    - YYKit
+
 SPEC CHECKSUMS:
   BlocksKit: 7f422b971407001178d181a43b99014ea2591fe6
   FMDB: 6198a90e7b6900cfc046e6bc0ef6ebb7be9236aa
@@ -57,4 +71,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 62877a62fec1f56b1d38f1ecb1cc1591756785ac
 
-COCOAPODS: 1.3.1
+COCOAPODS: 1.5.3

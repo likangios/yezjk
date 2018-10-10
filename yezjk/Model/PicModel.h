@@ -40,4 +40,6 @@
  */
 @property(nonatomic,strong) NSNumber *isStore;
 
+@property(nonatomic,assign) BOOL isCustom;
+
 @end
