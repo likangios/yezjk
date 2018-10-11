@@ -11,6 +11,8 @@
 		7925B766216DF80C009E6531 /* LUCKAddPicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7925B765216DF80C009E6531 /* LUCKAddPicViewController.m */; };
 		7949630620D8E7F200F90B21 /* PicPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7949630520D8E7F200F90B21 /* PicPageViewController.m */; };
 		7949630920D8E87C00F90B21 /* PicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7949630820D8E87C00F90B21 /* PicViewController.m */; };
+		798B9444216F4D23002389F3 /* LUCKTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 798B9443216F4D23002389F3 /* LUCKTestViewController.m */; };
+		798B9447216F4D47002389F3 /* LUCKBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 798B9446216F4D47002389F3 /* LUCKBottomView.m */; };
 		79D7AEE920E31D6500528F3E /* libBaiduSpeechSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 79D7AEE720E31D6400528F3E /* libBaiduSpeechSDK.a */; };
 		79D7AEEA20E31D6500528F3E /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 79D7AEE820E31D6400528F3E /* .gitignore */; };
 		840E242020E913AA00AF1377 /* LUCKStoryListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 840E241E20E913AA00AF1377 /* LUCKStoryListCell.m */; };
@@ -134,6 +136,10 @@
 		7949630520D8E7F200F90B21 /* PicPageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PicPageViewController.m; sourceTree = "<group>"; };
 		7949630720D8E87C00F90B21 /* PicViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PicViewController.h; sourceTree = "<group>"; };
 		7949630820D8E87C00F90B21 /* PicViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PicViewController.m; sourceTree = "<group>"; };
+		798B9442216F4D23002389F3 /* LUCKTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LUCKTestViewController.h; sourceTree = "<group>"; };
+		798B9443216F4D23002389F3 /* LUCKTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LUCKTestViewController.m; sourceTree = "<group>"; };
+		798B9445216F4D47002389F3 /* LUCKBottomView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LUCKBottomView.h; sourceTree = "<group>"; };
+		798B9446216F4D47002389F3 /* LUCKBottomView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LUCKBottomView.m; sourceTree = "<group>"; };
 		79D7AEE720E31D6400528F3E /* libBaiduSpeechSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libBaiduSpeechSDK.a; sourceTree = "<group>"; };
 		79D7AEE820E31D6400528F3E /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		840E241D20E913A900AF1377 /* LUCKStoryListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LUCKStoryListCell.h; sourceTree = "<group>"; };
@@ -298,6 +304,10 @@
 			children = (
 				7949630420D8E7F200F90B21 /* PicPageViewController.h */,
 				7949630520D8E7F200F90B21 /* PicPageViewController.m */,
+				798B9445216F4D47002389F3 /* LUCKBottomView.h */,
+				798B9446216F4D47002389F3 /* LUCKBottomView.m */,
+				798B9442216F4D23002389F3 /* LUCKTestViewController.h */,
+				798B9443216F4D23002389F3 /* LUCKTestViewController.m */,
 				84E280CD20D72F480072A8A4 /* ViewController.h */,
 				84E280CE20D72F480072A8A4 /* ViewController.m */,
 				7925B764216DF80B009E6531 /* LUCKAddPicViewController.h */,
@@ -813,6 +823,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84E280CF20D72F480072A8A4 /* ViewController.m in Sources */,
+				798B9447216F4D47002389F3 /* LUCKBottomView.m in Sources */,
 				7925B766216DF80C009E6531 /* LUCKAddPicViewController.m in Sources */,
 				840E535620DF98F400942AFE /* LUCKDBManager.m in Sources */,
 				84CCFD4E20E8D8AA00563EA6 /* MBProgressHUD+JKDSMB.m in Sources */,
@@ -821,6 +832,7 @@
 				840E535920DF9A2E00942AFE /* LUCKStoryModel.m in Sources */,
 				840E242020E913AA00AF1377 /* LUCKStoryListCell.m in Sources */,
 				84CCFD4920E7077600563EA6 /* LUCKStoryListViewController.m in Sources */,
+				798B9444216F4D23002389F3 /* LUCKTestViewController.m in Sources */,
 				84E2817220D76E260072A8A4 /* PicModel.m in Sources */,
 				7949630620D8E7F200F90B21 /* PicPageViewController.m in Sources */,
 				84E280CC20D72F480072A8A4 /* AppDelegate.m in Sources */,
@@ -960,7 +972,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = E5EJ3R9VNE;
+				DEVELOPMENT_TEAM = GM6C5S4FLT;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/yezjk/lib",
@@ -974,7 +986,7 @@
 					"$(PROJECT_DIR)/yezjk/BDSClientLib",
 					"$(PROJECT_DIR)/yezjk/lib/BDSClientLib",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.lk.yezjk;
+				PRODUCT_BUNDLE_IDENTIFIER = com.luck.yezjk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -986,7 +998,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = E5EJ3R9VNE;
+				DEVELOPMENT_TEAM = GM6C5S4FLT;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/yezjk/lib",
@@ -1000,7 +1012,7 @@
 					"$(PROJECT_DIR)/yezjk/BDSClientLib",
 					"$(PROJECT_DIR)/yezjk/lib/BDSClientLib",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.lk.yezjk;
+				PRODUCT_BUNDLE_IDENTIFIER = com.luck.yezjk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

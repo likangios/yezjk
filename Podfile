@@ -15,4 +15,9 @@ pod 'ReactiveObjC', '~> 2.1.2'
 pod 'IQKeyboardManager'
 pod 'MBProgressHUD', '~> 1.1.0'
 
+pod 'UMCCommon'
+pod 'UMCPush'
+pod 'UMCSecurityPlugins'
+
+
 end

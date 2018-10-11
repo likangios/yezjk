@@ -105,8 +105,13 @@
     
     [[self.storyButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
         @strongify(self);
+        NSArray *array = [[LUCKDBManager sharedInstance] lookupAllPicModelWithType:@3];
+        if (!array.count) {
+            [MBProgressHUD showInfoMessage:@"还没有添加任何卡片，快去添加吧"];
+            return ;
+        }
         PicPageViewController *page = [[PicPageViewController alloc]init];
-        page.dataArray = [[LUCKDBManager sharedInstance] lookupAllPicModelWithType:@3];
+        page.dataArray = array;
         [self.navigationController pushViewController:page animated:YES];
     }];
     [[self.customButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
@@ -116,8 +121,13 @@
     
     [[self.myStoreButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
         @strongify(self);
+        NSArray *array = [[LUCKDBManager sharedInstance] lookupAllStorePicModel];
+        if (!array.count) {
+            [MBProgressHUD showInfoMessage:@"还没有收藏任何卡片"];
+            return ;
+        }
         PicPageViewController *page = [[PicPageViewController alloc]init];
-        page.dataArray = [[LUCKDBManager sharedInstance] lookupAllStorePicModel];
+        page.dataArray = array;
         [self.navigationController pushViewController:page animated:YES];
     }];
 }
@@ -129,7 +139,7 @@
 - (UIButton *)customButton{
     if (!_customButton) {
         _customButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_customButton setTitle:@"自定义" forState:UIControlStateNormal];
+        [_customButton setTitle:@"添加卡片" forState:UIControlStateNormal];
         [_customButton setImageEdgeInsets:UIEdgeInsetsMake(0, -5, 0, 5)];
         [_customButton setTitleEdgeInsets:UIEdgeInsetsMake(0, 5, 0, -5)];
         _customButton.titleLabel.font = [UIFont systemFontOfSize:17];

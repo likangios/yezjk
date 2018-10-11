@@ -37,11 +37,27 @@
         [self.navigationController popViewControllerAnimated:YES];
     }];
     
+    
+    UILabel *tip = [UILabel new];
+    tip.text = @"点击选择图片";
+    tip.textColor = [UIColor blackColor];
+    tip.backgroundColor = [UIColor grayColor];
+    tip.textAlignment = NSTextAlignmentCenter;
+    tip.userInteractionEnabled = NO;
+    [self.view addSubview:tip];
+    [tip mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.size.mas_equalTo(kScreenWidth * 0.8);
+        make.centerX.equalTo(self.view);
+        make.top.mas_equalTo(80);
+    }];
+    
     [self.view addSubview:self.imgView];
     [self.view addSubview:self.chineseField];
     [self.view addSubview:self.englishField];
     [self.view addSubview:self.saveBtn];
 
+    
+    
     [self.imgView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.size.mas_equalTo(kScreenWidth * 0.8);
         make.centerX.equalTo(self.view);
@@ -66,6 +82,11 @@
         [self presentViewController:self.picker animated:YES completion:NULL];
     }];
     [[self.saveBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+        
+        if (!self.chineseField.text.length || !self.englishField.text.length || !self.imgView.image) {
+            [MBProgressHUD showInfoMessage:@"图片/中文/英文不完整"];
+            return ;
+        }
         //给图片以日期命名
         NSDateFormatter * fmt = [[NSDateFormatter alloc] init] ;
         [fmt setDateFormat:@"yyyy/MM/dd"];
@@ -73,7 +94,7 @@
         [fmthsm setDateFormat:@"yyyyMMddHHmmss"];
         NSString * imagename = [[NSString alloc]initWithFormat:@"%@.png",[fmthsm stringFromDate:[NSDate date]]];
         //调用方法保存图片
-        NSString * filePathString = [self savescanresultimage:self.imgView.image imagename:imagename];
+        [self savescanresultimage:self.imgView.image imagename:imagename];
         NSArray *customArray = [[LUCKDBManager sharedInstance] lookupAllPicModelWithType:@3];
         PicModel *lastModel = customArray.lastObject;
         PicModel *model = [[PicModel alloc]init];
@@ -101,14 +122,14 @@
 
     
 }
--(NSString *)savescanresultimage:(UIImage *)resultimage imagename:(NSString *)strimagename
+-(BOOL)savescanresultimage:(UIImage *)resultimage imagename:(NSString *)strimagename
 {
     NSData *imageData = UIImagePNGRepresentation(resultimage);
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDirectory = [paths objectAtIndex:0];
     NSString *filePath = [documentsDirectory stringByAppendingPathComponent:strimagename]; //Add the file name
-    [imageData writeToFile:filePath atomically:YES];
-    return filePath;
+   BOOL success =  [imageData writeToFile:filePath atomically:YES];
+    return success;
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker{
@@ -133,7 +154,7 @@
 - (UIButton *)saveBtn{
     if (!_saveBtn) {
         _saveBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        _saveBtn.backgroundColor = [UIColor colorWithHexString:@"dddddd"];
+        _saveBtn.backgroundColor = [UIColor colorWithHexString:@"000000"];
         [_saveBtn  setTitle:@"保存" forState:UIControlStateNormal];
         _saveBtn.layer.cornerRadius = 4;
     }
@@ -167,7 +188,7 @@
     if(!_imgView) {
         _imgView = [YYAnimatedImageView new];
         _imgView.contentMode = UIViewContentModeScaleAspectFill;
-        _imgView.backgroundColor = [UIColor qmui_randomColor];
+        _imgView.backgroundColor = [UIColor clearColor];
         _imgView.userInteractionEnabled = YES;
     }
     return _imgView;
