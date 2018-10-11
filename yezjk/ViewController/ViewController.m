@@ -22,6 +22,7 @@
 
 @property(nonatomic,strong) UIButton *storyButton;
 
+@property(nonatomic,strong) UIButton *customButton;
 
 @property(nonatomic,strong) UIButton *myStoreButton;
 
@@ -43,32 +44,51 @@
     [imageview mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.view);
     }];
-    
-    [self.view addSubview:self.topButton];
-    [self.view addSubview:self.bottomButton];
+    UIView *containView = [UIView new];
+    [self.view addSubview:containView];
+    [containView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.center.equalTo(self.view);
+        make.left.right.mas_equalTo(0);
+    }];
+    //果蔬
+    [containView addSubview:self.topButton];
+    //动物
+    [containView addSubview:self.bottomButton];
+    //自定义
+    [containView addSubview:self.customButton];
+    //我的卡片
+    [containView addSubview:self.storyButton];
+    //收藏
     [self.view addSubview:self.myStoreButton];
-    [self.view addSubview:self.storyButton];
 
     [self.topButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerX.equalTo(self.view);
-        make.centerY.equalTo(self.view.mas_centerY).offset(-40);
+        make.centerX.equalTo(containView);
+        make.top.mas_equalTo(0);
         make.size.mas_equalTo(CGSizeMake(150, 50));
     }];
     [self.bottomButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerX.equalTo(self.view);
-        make.centerY.equalTo(self.view.mas_centerY).offset(40);
+        make.centerX.equalTo(containView);
+        make.top.equalTo(self.topButton.mas_bottom).offset(20);
         make.size.mas_equalTo(CGSizeMake(150, 50));
     }];
     [self.storyButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerX.equalTo(self.view);
+        make.centerX.equalTo(containView);
         make.top.equalTo(self.bottomButton.mas_bottom).offset(20);
         make.size.mas_equalTo(CGSizeMake(150, 50));
     }];
-
+    [self.customButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(containView);
+        make.top.equalTo(self.storyButton.mas_bottom).offset(20);
+        make.size.mas_equalTo(CGSizeMake(150, 50));
+        make.bottom.mas_equalTo(0);
+    }];
+    
     [self.myStoreButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.bottom.mas_equalTo(-15);
         make.size.mas_equalTo(CGSizeMake(130, 40));
     }];
+
+    
     @weakify(self);
     [[self.topButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
         @strongify(self);
@@ -83,28 +103,42 @@
         [self.navigationController pushViewController:page animated:YES];
     }];
     
+    [[self.storyButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+        @strongify(self);
+        PicPageViewController *page = [[PicPageViewController alloc]init];
+        page.dataArray = [[LUCKDBManager sharedInstance] lookupAllPicModelWithType:@3];
+        [self.navigationController pushViewController:page animated:YES];
+    }];
+    [[self.customButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+        LUCKAddPicViewController *add = [[LUCKAddPicViewController alloc]init];
+        [self.navigationController pushViewController:add animated:YES];
+    }];
+    
     [[self.myStoreButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
         @strongify(self);
         PicPageViewController *page = [[PicPageViewController alloc]init];
         page.dataArray = [[LUCKDBManager sharedInstance] lookupAllStorePicModel];
         [self.navigationController pushViewController:page animated:YES];
     }];
-    [[self.storyButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
-//        NSArray *array = [[LUCKDBManager sharedInstance] lookupAllStoryLuckStoryModel];
-//        LUCKStoryListViewController *vc = [[LUCKStoryListViewController alloc]init];
-//        vc.dataArray = array;
-//        [self.navigationController pushViewController:vc animated:YES];
-//        NSLog(@"array.count %ld",array.count);
-        LUCKAddPicViewController *add = [[LUCKAddPicViewController alloc]init];
-        [self.navigationController pushViewController:add animated:YES];
-    }];
-
 }
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
 //    LUCKAddStoryViewController *add = [[LUCKAddStoryViewController alloc]init];
 //    [self.navigationController pushViewController:add animated:YES];
 }
 
+- (UIButton *)customButton{
+    if (!_customButton) {
+        _customButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_customButton setTitle:@"自定义" forState:UIControlStateNormal];
+        [_customButton setImageEdgeInsets:UIEdgeInsetsMake(0, -5, 0, 5)];
+        [_customButton setTitleEdgeInsets:UIEdgeInsetsMake(0, 5, 0, -5)];
+        _customButton.titleLabel.font = [UIFont systemFontOfSize:17];
+        [_customButton setTitleColor:[UIColor colorWithHexString:@"ffffff"] forState:UIControlStateNormal];
+        _customButton.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.6];
+        _customButton.layer.cornerRadius = 25.0;
+    }
+    return _customButton;
+}
 - (UIButton *)storyButton{
     if (!_storyButton) {
         _storyButton = [UIButton buttonWithType:UIButtonTypeCustom];

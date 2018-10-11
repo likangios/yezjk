@@ -25,6 +25,12 @@
         NSLog(@"错误: %ld, %@", (long)speakError.code, speakError.localizedDescription);
     }
 }
+-(UIImage*)loadImageWithName:(NSString *)imgName{
+    NSArray * paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask, YES);
+    NSString * documentsDirectory = [paths objectAtIndex:0];
+    NSString * path = [documentsDirectory stringByAppendingPathComponent:[NSString stringWithString: imgName] ];
+    UIImage * image = [UIImage imageWithContentsOfFile:path];return image;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
 //    self.fd_prefersNavigationBarHidden = YES;
@@ -34,7 +40,12 @@
         make.center.equalTo(self.view);
         make.size.mas_equalTo(MIN(CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame)));
     }];
-    self.showImageView.image = [UIImage imageNamed:self.model.imageName];
+    if (self.model.isCustom) {
+        self.showImageView.image = [self loadImageWithName:self.model.imageName];
+    }
+    else{
+        self.showImageView.image = [UIImage imageNamed:self.model.imageName];
+    }
     __weak typeof(self)weakSelf = self;
     [self.showImageView bk_whenTapped:^{
         [weakSelf speakMehtod];

@@ -66,10 +66,51 @@
         [self presentViewController:self.picker animated:YES completion:NULL];
     }];
     [[self.saveBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
-        
+        //给图片以日期命名
+        NSDateFormatter * fmt = [[NSDateFormatter alloc] init] ;
+        [fmt setDateFormat:@"yyyy/MM/dd"];
+        NSDateFormatter * fmthsm = [[NSDateFormatter alloc] init] ;
+        [fmthsm setDateFormat:@"yyyyMMddHHmmss"];
+        NSString * imagename = [[NSString alloc]initWithFormat:@"%@.png",[fmthsm stringFromDate:[NSDate date]]];
+        //调用方法保存图片
+        NSString * filePathString = [self savescanresultimage:self.imgView.image imagename:imagename];
+        NSArray *customArray = [[LUCKDBManager sharedInstance] lookupAllPicModelWithType:@3];
+        PicModel *lastModel = customArray.lastObject;
+        PicModel *model = [[PicModel alloc]init];
+            model.title = self.chineseField.text;
+            model.word = self.englishField.text;
+            model.imageName = imagename;
+            model.isCustom = YES;
+            model.type = @3;
+            model.isStore = @0;
+        if (lastModel) {
+            model.picId = [NSString stringWithFormat:@"%ld",lastModel.picId.integerValue + 1];
+        }
+        else{
+            model.picId = @"3000";
+        }
+        BOOL rect =  [[LUCKDBManager sharedInstance] insertPicModel:model];
+        if (rect) {
+            [MBProgressHUD showInfoMessage:@"添加成功"];
+            self.imgView.image = nil;
+            self.chineseField.text = nil;
+            self.englishField.text = nil;
+        }
     }];
     
+
+    
 }
+-(NSString *)savescanresultimage:(UIImage *)resultimage imagename:(NSString *)strimagename
+{
+    NSData *imageData = UIImagePNGRepresentation(resultimage);
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *filePath = [documentsDirectory stringByAppendingPathComponent:strimagename]; //Add the file name
+    [imageData writeToFile:filePath atomically:YES];
+    return filePath;
+}
+
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker{
     [picker dismissViewControllerAnimated:YES completion:NULL];
 }

@@ -42,13 +42,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 //    self.fd_prefersNavigationBarHidden = YES;
-    
     self.view.backgroundColor =[UIColor whiteColor];
     PicViewController *vc = (PicViewController *)[self getViewControllerWithIndex:0];
     if (vc) {
         [vc speakMehtod];
         self.currentPicViewController = vc;
-        self.view.backgroundColor = [[UIImage imageNamed:vc.model.imageName] qmui_averageColor];
+        if (vc.model.isCustom) {
+            self.view.backgroundColor = [[self loadImageWithName:vc.model.imageName] qmui_averageColor];
+        }
+        else{
+            self.view.backgroundColor = [[UIImage imageNamed:vc.model.imageName] qmui_averageColor];
+        }        
         [self.pageController setViewControllers:@[vc] direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:NULL];
     }
     [self addChildViewController:self.pageController];
@@ -103,8 +107,20 @@
     }
     [vc speakMehtod];
     self.currentPicViewController = vc;
-    self.view.backgroundColor = [[UIImage imageNamed:vc.model.imageName] qmui_averageColor];
+    if (vc.model.isCustom) {
+        self.view.backgroundColor = [[self loadImageWithName:vc.model.imageName] qmui_averageColor];
+    }
+    else{
+        self.view.backgroundColor = [[UIImage imageNamed:vc.model.imageName] qmui_averageColor];
+    }
 }
+-(UIImage*)loadImageWithName:(NSString *)imgName{
+    NSArray * paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask, YES);
+    NSString * documentsDirectory = [paths objectAtIndex:0];
+    NSString * path = [documentsDirectory stringByAppendingPathComponent:[NSString stringWithString: imgName] ];
+    UIImage * image = [UIImage imageWithContentsOfFile:path];return image;
+}
+
 - (void)pageViewController:(UIPageViewController *)pageViewController willTransitionToViewControllers:(NSArray<UIViewController *> *)pendingViewControllers{
     NSLog(@"willTransitionToViewControllers");
 
