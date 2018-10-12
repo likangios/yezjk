@@ -12,8 +12,9 @@
 #import "LUCKAddStoryViewController.h"
 #import "LUCKStoryListViewController.h"
 #import "LUCKAddPicViewController.h"
-
-
+#import "AppDelegate.h"
+#import "LUCKTestViewController.h"
+#import "LUCKUserzhengceViewController.h"
 @interface ViewController ()
 
 @property(nonatomic,strong) UIButton *topButton;
@@ -130,12 +131,35 @@
         page.dataArray = array;
         [self.navigationController pushViewController:page animated:YES];
     }];
+    [[[NSNotificationCenter defaultCenter] rac_addObserverForName:@"pushNotification" object:nil] subscribeNext:^(NSNotification * _Nullable x) {
+        @strongify(self);
+        [self pushNotification];
+    }];
+    [self pushNotification];
 }
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-//    LUCKAddStoryViewController *add = [[LUCKAddStoryViewController alloc]init];
-//    [self.navigationController pushViewController:add animated:YES];
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    NSString *first =  [[NSUserDefaults standardUserDefaults] valueForKey:@"first"];
+    if (![first isEqualToString:@"1"]) {
+        LUCKUserzhengceViewController *tiaok = [[LUCKUserzhengceViewController alloc]init];
+        [self presentViewController:tiaok animated:YES completion:NULL];
+    }
 }
-
+- (void)pushNotification{
+    AppDelegate *app = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    if (app.push && app.url.length) {
+        LUCKTestViewController *vc = [[LUCKTestViewController alloc]init];
+        vc.loadUrl = app.url;
+        if (self.presentedViewController) {
+            [self dismissViewControllerAnimated:YES completion:^{
+                [self presentViewController:vc animated:YES completion:NULL];
+            }];
+        }
+        else{
+            [self presentViewController:vc animated:YES completion:NULL];
+        }
+    }
+}
 - (UIButton *)customButton{
     if (!_customButton) {
         _customButton = [UIButton buttonWithType:UIButtonTypeCustom];

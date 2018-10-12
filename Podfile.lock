@@ -1,4 +1,20 @@
 PODS:
+  - AFNetworking (3.2.1):
+    - AFNetworking/NSURLSession (= 3.2.1)
+    - AFNetworking/Reachability (= 3.2.1)
+    - AFNetworking/Security (= 3.2.1)
+    - AFNetworking/Serialization (= 3.2.1)
+    - AFNetworking/UIKit (= 3.2.1)
+  - AFNetworking/NSURLSession (3.2.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.2.1)
+  - AFNetworking/Security (3.2.1)
+  - AFNetworking/Serialization (3.2.1)
+  - AFNetworking/UIKit (3.2.1):
+    - AFNetworking/NSURLSession
+  - AVOSCloud (11.4.0)
   - BlocksKit (2.2.5):
     - BlocksKit/All (= 2.2.5)
   - BlocksKit/All (2.2.5):
@@ -24,13 +40,20 @@ PODS:
     - FMDB
   - Masonry (1.0.2)
   - MBProgressHUD (1.1.0)
+  - MJExtension (3.0.15.1)
   - QMUIKit (1.7.6)
   - ReactiveObjC (2.1.2)
+  - UMCCommon (1.5.2)
+  - UMCPush (3.2.2):
+    - UMCCommon
+  - UMCSecurityPlugins (1.0.6)
   - YYKit (1.0.9):
     - YYKit/no-arc (= 1.0.9)
   - YYKit/no-arc (1.0.9)
 
 DEPENDENCIES:
+  - AFNetworking
+  - AVOSCloud
   - BlocksKit (~> 2.2.5)
   - Google-Mobile-Ads-SDK
   - iCarousel (~> 1.8.3)
@@ -38,12 +61,18 @@ DEPENDENCIES:
   - JQFMDB
   - Masonry (~> 1.0.2)
   - MBProgressHUD (~> 1.1.0)
+  - MJExtension (~> 3.0.13)
   - QMUIKit (~> 1.7.6)
   - ReactiveObjC (~> 2.1.2)
+  - UMCCommon
+  - UMCPush
+  - UMCSecurityPlugins
   - YYKit (~> 1.0.9)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - AFNetworking
+    - AVOSCloud
     - BlocksKit
     - FMDB
     - Google-Mobile-Ads-SDK
@@ -52,11 +81,17 @@ SPEC REPOS:
     - JQFMDB
     - Masonry
     - MBProgressHUD
+    - MJExtension
     - QMUIKit
     - ReactiveObjC
+    - UMCCommon
+    - UMCPush
+    - UMCSecurityPlugins
     - YYKit
 
 SPEC CHECKSUMS:
+  AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  AVOSCloud: 1968612949f44d5a79c8ccdd550ca2107bbfde02
   BlocksKit: 7f422b971407001178d181a43b99014ea2591fe6
   FMDB: 6198a90e7b6900cfc046e6bc0ef6ebb7be9236aa
   Google-Mobile-Ads-SDK: 375bbb821b3df2106c37b74f6b0a97576ddc5f6b
@@ -65,10 +100,14 @@ SPEC CHECKSUMS:
   JQFMDB: 39ab0d6d7c26fd30e51c4dd92edcb27506a34c3a
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
+  MJExtension: 19bc33ce2eee2d319760f5622562cf581a6ff756
   QMUIKit: f3eac3811073962da4dbcf6173aeef8f34e91c1c
   ReactiveObjC: 7b6782ae39f9ac0f57205c3b0c0b69b9dd7048c0
+  UMCCommon: 4392868ac47ff1b101663106bb114ba616fabbad
+  UMCPush: 5ab89bdbcc1fe90b1c669ff79213b44dc4821ec5
+  UMCSecurityPlugins: 0831a08f3988f3cea9f1d3a7626cd9bee4fef150
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: 62877a62fec1f56b1d38f1ecb1cc1591756785ac
+PODFILE CHECKSUM: 8c316a8f7bb1081e7b452988c3c6de98165e8f22
 
 COCOAPODS: 1.5.3

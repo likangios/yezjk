@@ -21,11 +21,13 @@
 
 @implementation LUCKTestViewController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.webView];
     [self.view addSubview:self.bottomView];
+    [self.bottomView addSubview:self.progressView];
     [self.webView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.mas_equalTo(0);
         if(KIsiPhoneX) {
@@ -46,8 +48,36 @@
         }
         make.height.mas_equalTo(45);
     }];
+    [self.progressView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.top.mas_equalTo(0);
+        make.height.mas_equalTo(2);
+    }];
     
-    // Do any additional setup after loading the view.
+    if (self.loadUrl.length) {
+        [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.loadUrl]]];
+    }
+    @weakify(self);
+    [[self.webView rac_valuesForKeyPath:@"estimatedProgress" observer:self] subscribeNext:^(NSNumber *x) {
+        @strongify(self);
+        self.progressView.progress = x.floatValue;
+        if (self.progressView.progress == 1) {
+            [UIView animateWithDuration:0.25f delay:0.3f options:UIViewAnimationOptionCurveEaseOut animations:^{
+                self.progressView.transform = CGAffineTransformMakeScale(1.0f, 1.2f);
+            } completion:^(BOOL finished) {
+                self.progressView.hidden = YES;
+                self.progressView.progress = 0;
+                
+            }];
+        }
+    }];
+}
+#pragma mark - WKdelegate
+- (void)webView:(WKWebView *)webView didStartProvisionalNavigation:(WKNavigation *)navigation{
+    self.progressView.hidden = NO;
+    [self.view bringSubviewToFront:self.progressView];
+}
+- (void)webView:(WKWebView *)webView didFailNavigation:(WKNavigation *)navigation withError:(NSError *)error{
+    self.progressView.hidden = YES;
 }
 - (WKWebView *)webView{
     if (!_webView) {
@@ -73,10 +103,97 @@
     if (!_bottomView) {
         _bottomView = [[LUCKBottomView alloc]init];
         [_bottomView setButtonClick:^(NSInteger index) {
-            
+            switch (index) {
+                case 1:
+                    [self goHome];
+                    break;
+                case 2:
+                    [self goBack];
+                    break;
+                case 3:
+                    [self goForward];
+                    break;
+                case 4:
+                    [self goReload];
+                    break;
+                case 5:
+                    [self goSafari];
+                    break;
+                default:
+                    break;
+            }
         }];
     }
     return _bottomView;
+}
+- (BOOL)currentUrlIsNIll {
+    if (self.webView.URL.absoluteString == nil) {
+        return  YES;
+    }
+    return NO;
+}
+- (void)goHome{
+    if (self.webView.backForwardList.backList.count) {
+        [self.webView goToBackForwardListItem:self.webView.backForwardList.backList.firstObject];
+    }else{
+        [self loadMainUrl];
+    }
+}
+- (void)goBack{
+    if ([self currentUrlIsNIll]) {
+        [self loadMainUrl];
+    }
+    else{
+        if ([self.webView canGoBack]) {
+            [self.webView goBack];
+        }
+    }
+}
+- (void)goForward{
+    if ([self currentUrlIsNIll]) {
+        [self loadMainUrl];
+    }
+    else{
+        if ([self.webView canGoForward]) {
+            [self.webView goForward];
+        }
+    }
+}
+- (void)goReload{
+    if ([self currentUrlIsNIll]) {
+        [self loadMainUrl];
+    }
+    else{
+        [self.webView reload];
+    }
+}
+- (void)goSafari{
+    [UIAlertView bk_showAlertViewWithTitle:nil message:@"是否使用浏览器打开" cancelButtonTitle:@"取消" otherButtonTitles:@[@"确定"] handler:^(UIAlertView *alertView, NSInteger buttonIndex) {
+        if (buttonIndex == 1) {
+            [self openSafari];
+        }
+    }];
+}
+- (void)openSafari{
+    if ([[UIApplication sharedApplication] canOpenURL:self.webView.URL]) {
+        [[UIApplication sharedApplication] openURL:self.webView.URL];
+    }
+}
+- (void)loadMainUrl{
+    if (!self.loadUrl.length) {
+        exit(0);
+        return;
+    }
+    [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.loadUrl]]];
+}
+- (UIProgressView *)progressView{
+    if (!_progressView) {
+        _progressView = [[UIProgressView alloc]init];
+        _progressView.progressTintColor = [UIColor blueColor];
+        _progressView.trackTintColor = [UIColor clearColor];
+        _progressView.hidden = YES;
+    }
+    return _progressView;
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
