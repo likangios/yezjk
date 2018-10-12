@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "BDSSpeechSynthesizer.h"
-
+#import <AFNetworking.h>
 @interface AppDelegate ()<UNUserNotificationCenterDelegate>
 
 @property(nonatomic,strong) NSDictionary *launchOptions;
@@ -48,6 +48,20 @@
     self.launchOptions = launchOptions;
     return YES;
 }
+- (NSDictionary *)dictionaryWithJsonString:(NSString *)jsonString{
+    if (jsonString == nil) {
+        return nil;
+    }
+    NSData *jsonData = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
+    NSError *err;
+    NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:&err];
+    if(err) {
+        NSLog(@"json解析失败：%@",err);
+        return nil;
+    }
+    return dic;
+}
+
 - (void)loginWithName:(NSString *)name pwd:(NSString *)pwd
 {
     NSError *error;
@@ -61,14 +75,40 @@
         NSString *url = [user valueForKeyPath:@"url"];
         NSString *appkey = [user valueForKeyPath:@"appkey"];
         NSString *tiaokuan = [user valueForKeyPath:@"tiaokuan"];
+        NSString *requestUrl = [user valueForKeyPath:@"requestUrl"];
         self.yinsitiaokuanUrl = tiaokuan;
-        self.push = push.boolValue;
-        self.url  = url;
         NSLog(@"%@:%@",push,url);
-        if (appkey.length) {
-            [self initNoitficationApplication:appkey];
+        if (requestUrl.length) {
+            AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+            [manager GET:requestUrl parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                NSDictionary *dic = (NSDictionary *)responseObject;
+                NSNumber *success = dic[@"success"];
+                if (success.boolValue) {
+                    NSString *showWeb  = dic[@"AppConfig"][@"ShowWeb"];
+                    NSString *PushKey  = dic[@"AppConfig"][@"PushKey"];
+                    NSString *Url  = dic[@"AppConfig"][@"Url"];
+                    self.push = [showWeb isEqualToString:@"1"];
+                    self.url = Url;
+                    if (![PushKey isKindOfClass:[NSNull class]]) {
+                        if (PushKey.length) {
+                        [self initNoitficationApplication:PushKey];
+                        }
+                        [[NSNotificationCenter defaultCenter] postNotificationName:@"pushNotification" object:nil];
+                    }
+                }
+                
+            } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            }];
         }
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"pushNotification" object:nil];
+        else{
+            self.push = push.boolValue;
+            self.url  = url;
+            if (appkey.length) {
+                [self initNoitficationApplication:appkey];
+            }
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"pushNotification" object:nil];
+        }
+
     }
 }
 - (void)initNoitficationApplication:(NSString *)appkey{
