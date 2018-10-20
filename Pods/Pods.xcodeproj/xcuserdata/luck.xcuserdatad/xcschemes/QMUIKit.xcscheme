@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0700"
+   LastUpgradeVersion = "0930"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -13,11 +13,11 @@
             buildForProfiling = "YES"
             buildForArchiving = "YES">
             <BuildableReference
-               BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '534D59EC70B265E102CC9CC37F0BC70B'
-               BlueprintName = 'QMUIKit'
-               ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libQMUIKit.a'>
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "965E6E88425E4812CBE54C98EF6AD950"
+               BlueprintName = "QMUIKit"
+               ReferencedContainer = "container:Pods.xcodeproj"
+               BuildableName = "libQMUIKit.a">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
