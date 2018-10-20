@@ -269,14 +269,9 @@
 		7934BDA420E31CBF00E0F118 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				79872AA421747DBF009D0C02 /* web */,
 				7949630420D8E7F200F90B21 /* PicPageViewController.h */,
 				7949630520D8E7F200F90B21 /* PicPageViewController.m */,
-				798B9445216F4D47002389F3 /* LUCKBottomView.h */,
-				798B9446216F4D47002389F3 /* LUCKBottomView.m */,
-				798B9442216F4D23002389F3 /* LUCKTestViewController.h */,
-				798B9443216F4D23002389F3 /* LUCKTestViewController.m */,
-				798B944B21704C23002389F3 /* LUCKUserzhengceViewController.h */,
-				798B944C21704C23002389F3 /* LUCKUserzhengceViewController.m */,
 				84E280CD20D72F480072A8A4 /* ViewController.h */,
 				84E280CE20D72F480072A8A4 /* ViewController.m */,
 				7925B764216DF80B009E6531 /* LUCKAddPicViewController.h */,
@@ -334,6 +329,19 @@
 				840E535A20E0692500942AFE /* bkmu_5.m4a */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		79872AA421747DBF009D0C02 /* web */ = {
+			isa = PBXGroup;
+			children = (
+				798B9445216F4D47002389F3 /* LUCKBottomView.h */,
+				798B9446216F4D47002389F3 /* LUCKBottomView.m */,
+				798B9442216F4D23002389F3 /* LUCKTestViewController.h */,
+				798B9443216F4D23002389F3 /* LUCKTestViewController.m */,
+				798B944B21704C23002389F3 /* LUCKUserzhengceViewController.h */,
+				798B944C21704C23002389F3 /* LUCKUserzhengceViewController.m */,
+			);
+			path = web;
 			sourceTree = "<group>";
 		};
 		79D7AEE620E31D6400528F3E /* BDSClientLib */ = {
