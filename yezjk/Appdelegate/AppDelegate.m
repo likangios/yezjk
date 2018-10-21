@@ -9,7 +9,9 @@
 #import "AppDelegate.h"
 #import "BDSSpeechSynthesizer.h"
 #import <AFNetworking.h>
-@interface AppDelegate ()<UNUserNotificationCenterDelegate>
+#import "GDTSplashAd.h"
+
+@interface AppDelegate ()<UNUserNotificationCenterDelegate,GDTSplashAdDelegate>
 
 @property(nonatomic,strong) NSDictionary *launchOptions;
 
@@ -19,8 +21,13 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
-    // 设置apiKey和secretKey
+    
+    GDTSplashAd *splash = [[GDTSplashAd alloc]initWithAppId:ad_appkey placementId:placementid_open];
+    splash.delegate = self;
+    splash.fetchDelay = 3;
+    [splash loadAdAndShowInWindow:self.window];
+
+    
     [IQKeyboardManager sharedManager].enable = YES;
     [IQKeyboardManager sharedManager].shouldResignOnTouchOutside = YES;
     [[BDSSpeechSynthesizer sharedInstance] setApiKey:@"lCyghXZxsaSbkKGpaFMfrVSz" withSecretKey:@"lIfZjBoyo2Y3GHdQI1DuFA30jvzdSbqq"];
@@ -48,6 +55,13 @@
     self.launchOptions = launchOptions;
     return YES;
 }
+- (void)splashAdSuccessPresentScreen:(GDTSplashAd *)splashAd{
+    NSLog(@"开屏广告展示成功");
+}
+- (void)splashAdFailToPresent:(GDTSplashAd *)splashAd withError:(NSError *)error{
+    NSLog(@"开屏广告展示失败：%@",error.description);
+}
+
 - (NSDictionary *)dictionaryWithJsonString:(NSString *)jsonString{
     if (jsonString == nil) {
         return nil;

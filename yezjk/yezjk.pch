@@ -34,6 +34,13 @@
 
 #define KIsiPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
 
+//腾讯广告
+#define ad_appkey @"1107916596"
+#define placementid_banner  @""
+#define placementid_open  @"9030248261112681"
+#define placementid_center  @""
+
+
 
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.

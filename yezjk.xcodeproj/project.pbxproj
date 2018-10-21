@@ -17,6 +17,12 @@
 		79D7AEE920E31D6500528F3E /* libBaiduSpeechSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 79D7AEE720E31D6400528F3E /* libBaiduSpeechSDK.a */; };
 		79D7AEEA20E31D6500528F3E /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 79D7AEE820E31D6400528F3E /* .gitignore */; };
 		8406304D21765CBC00208CF4 /* LUCKDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8406304B21765CBC00208CF4 /* LUCKDBManager.m */; };
+		840630AB217CB5A400208CF4 /* libGDTMobSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 840630AA217CB5A400208CF4 /* libGDTMobSDK.a */; };
+		840630AD217CB70A00208CF4 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840630AC217CB70900208CF4 /* AdSupport.framework */; };
+		840630AF217CB71100208CF4 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840630AE217CB71100208CF4 /* WebKit.framework */; };
+		840630B1217CB71F00208CF4 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 840630B0217CB71E00208CF4 /* libxml2.tbd */; };
+		840630B3217CB73700208CF4 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840630B2217CB73700208CF4 /* Security.framework */; };
+		840630B5217CB74200208CF4 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 840630B4217CB74100208CF4 /* libz.tbd */; };
 		840E242020E913AA00AF1377 /* LUCKStoryListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 840E241E20E913AA00AF1377 /* LUCKStoryListCell.m */; };
 		840E242120E913AA00AF1377 /* LUCKStoryListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 840E241F20E913AA00AF1377 /* LUCKStoryListCell.xib */; };
 		840E535920DF9A2E00942AFE /* LUCKStoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 840E535820DF9A2E00942AFE /* LUCKStoryModel.m */; };
@@ -27,8 +33,6 @@
 		840E536320E0692900942AFE /* bkmu_4.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 840E535E20E0692900942AFE /* bkmu_4.m4a */; };
 		84CCFCFD20E2594B00563EA6 /* AipBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84CCFCFA20E2594B00563EA6 /* AipBase.framework */; };
 		84CCFCFE20E2594B00563EA6 /* AipOcrSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84CCFCFB20E2594B00563EA6 /* AipOcrSdk.framework */; };
-		84CCFCFF20E2594B00563EA6 /* IdcardQuality.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84CCFCFC20E2594B00563EA6 /* IdcardQuality.framework */; };
-		84CCFD0020E2595200563EA6 /* AipBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84CCFCFA20E2594B00563EA6 /* AipBase.framework */; };
 		84CCFD0120E2595200563EA6 /* AipBase.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 84CCFCFA20E2594B00563EA6 /* AipBase.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		84CCFD0320E2595600563EA6 /* AipOcrSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84CCFCFB20E2594B00563EA6 /* AipOcrSdk.framework */; };
 		84CCFD0420E2595600563EA6 /* AipOcrSdk.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 84CCFCFB20E2594B00563EA6 /* AipOcrSdk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -125,6 +129,20 @@
 		79D7AEE820E31D6400528F3E /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		8406304B21765CBC00208CF4 /* LUCKDBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LUCKDBManager.m; sourceTree = "<group>"; };
 		8406304C21765CBC00208CF4 /* LUCKDBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LUCKDBManager.h; sourceTree = "<group>"; };
+		840630A2217CB5A400208CF4 /* GDTNativeExpressAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTNativeExpressAdView.h; sourceTree = "<group>"; };
+		840630A3217CB5A400208CF4 /* GDTMobBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTMobBannerView.h; sourceTree = "<group>"; };
+		840630A4217CB5A400208CF4 /* GDTNativeAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTNativeAd.h; sourceTree = "<group>"; };
+		840630A5217CB5A400208CF4 /* GDTSDKConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTSDKConfig.h; sourceTree = "<group>"; };
+		840630A6217CB5A400208CF4 /* GDTMobInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTMobInterstitial.h; sourceTree = "<group>"; };
+		840630A7217CB5A400208CF4 /* GDTSplashAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTSplashAd.h; sourceTree = "<group>"; };
+		840630A8217CB5A400208CF4 /* GDTNativeExpressAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTNativeExpressAd.h; sourceTree = "<group>"; };
+		840630A9217CB5A400208CF4 /* GDTSDKDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTSDKDefines.h; sourceTree = "<group>"; };
+		840630AA217CB5A400208CF4 /* libGDTMobSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGDTMobSDK.a; sourceTree = "<group>"; };
+		840630AC217CB70900208CF4 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		840630AE217CB71100208CF4 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		840630B0217CB71E00208CF4 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
+		840630B2217CB73700208CF4 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		840630B4217CB74100208CF4 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		840E241D20E913A900AF1377 /* LUCKStoryListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LUCKStoryListCell.h; sourceTree = "<group>"; };
 		840E241E20E913AA00AF1377 /* LUCKStoryListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LUCKStoryListCell.m; sourceTree = "<group>"; };
 		840E241F20E913AA00AF1377 /* LUCKStoryListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LUCKStoryListCell.xib; sourceTree = "<group>"; };
@@ -240,6 +258,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				840630B5217CB74200208CF4 /* libz.tbd in Frameworks */,
+				840630B3217CB73700208CF4 /* Security.framework in Frameworks */,
+				840630B1217CB71F00208CF4 /* libxml2.tbd in Frameworks */,
+				840630AF217CB71100208CF4 /* WebKit.framework in Frameworks */,
+				840630AD217CB70A00208CF4 /* AdSupport.framework in Frameworks */,
 				84E2816F20D735E90072A8A4 /* CoreTelephony.framework in Frameworks */,
 				84E2816E20D735E20072A8A4 /* CoreLocation.framework in Frameworks */,
 				84E2816D20D735DD0072A8A4 /* CFNetwork.framework in Frameworks */,
@@ -254,8 +277,7 @@
 				84E2816120D733240072A8A4 /* libz.1.2.5.tbd in Frameworks */,
 				84E2815F20D7331B0072A8A4 /* libc++.tbd in Frameworks */,
 				84E2815920D733000072A8A4 /* libsqlite3.0.tbd in Frameworks */,
-				84CCFD0020E2595200563EA6 /* AipBase.framework in Frameworks */,
-				84CCFCFF20E2594B00563EA6 /* IdcardQuality.framework in Frameworks */,
+				840630AB217CB5A400208CF4 /* libGDTMobSDK.a in Frameworks */,
 				84CCFD0520E2595900563EA6 /* IdcardQuality.framework in Frameworks */,
 				84E2815B20D733090072A8A4 /* libstdc++.6.0.9.tbd in Frameworks */,
 				0BDABF6A612FC4643E071107 /* libPods-yezjk.a in Frameworks */,
@@ -353,9 +375,26 @@
 			path = BDSClientLib;
 			sourceTree = "<group>";
 		};
+		840630A1217CB5A400208CF4 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				840630A2217CB5A400208CF4 /* GDTNativeExpressAdView.h */,
+				840630A3217CB5A400208CF4 /* GDTMobBannerView.h */,
+				840630A4217CB5A400208CF4 /* GDTNativeAd.h */,
+				840630A5217CB5A400208CF4 /* GDTSDKConfig.h */,
+				840630A6217CB5A400208CF4 /* GDTMobInterstitial.h */,
+				840630A7217CB5A400208CF4 /* GDTSplashAd.h */,
+				840630A8217CB5A400208CF4 /* GDTNativeExpressAd.h */,
+				840630A9217CB5A400208CF4 /* GDTSDKDefines.h */,
+				840630AA217CB5A400208CF4 /* libGDTMobSDK.a */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
 		84CCFCF920E2594B00563EA6 /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				840630A1217CB5A400208CF4 /* lib */,
 				79D7AEE620E31D6400528F3E /* BDSClientLib */,
 				84E280E020D72FEE0072A8A4 /* BDSClientHeaders */,
 				84E2810020D730040072A8A4 /* BDSClientResource */,
@@ -572,6 +611,11 @@
 		84E2815720D732F50072A8A4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				840630B4217CB74100208CF4 /* libz.tbd */,
+				840630B2217CB73700208CF4 /* Security.framework */,
+				840630B0217CB71E00208CF4 /* libxml2.tbd */,
+				840630AE217CB71100208CF4 /* WebKit.framework */,
+				840630AC217CB70900208CF4 /* AdSupport.framework */,
 				84E2816920D733680072A8A4 /* CoreTelephony.framework */,
 				84E2816820D733600072A8A4 /* CoreLocation.framework */,
 				84E2816720D733580072A8A4 /* CFNetwork.framework */,
@@ -932,6 +976,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/yezjk/BDSClientLib",
 					"$(PROJECT_DIR)/yezjk/lib/BDSClientLib",
+					"$(PROJECT_DIR)/yezjk/lib/lib",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.luck.yezjk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -961,6 +1006,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/yezjk/BDSClientLib",
 					"$(PROJECT_DIR)/yezjk/lib/BDSClientLib",
+					"$(PROJECT_DIR)/yezjk/lib/lib",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.luck.yezjk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
