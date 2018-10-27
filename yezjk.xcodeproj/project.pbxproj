@@ -14,7 +14,6 @@
 		798B9444216F4D23002389F3 /* LUCKTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 798B9443216F4D23002389F3 /* LUCKTestViewController.m */; };
 		798B9447216F4D47002389F3 /* LUCKBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 798B9446216F4D47002389F3 /* LUCKBottomView.m */; };
 		798B944D21704C23002389F3 /* LUCKUserzhengceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 798B944C21704C23002389F3 /* LUCKUserzhengceViewController.m */; };
-		79D7AEE920E31D6500528F3E /* libBaiduSpeechSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 79D7AEE720E31D6400528F3E /* libBaiduSpeechSDK.a */; };
 		79D7AEEA20E31D6500528F3E /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 79D7AEE820E31D6400528F3E /* .gitignore */; };
 		8406304D21765CBC00208CF4 /* LUCKDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8406304B21765CBC00208CF4 /* LUCKDBManager.m */; };
 		840630AB217CB5A400208CF4 /* libGDTMobSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 840630AA217CB5A400208CF4 /* libGDTMobSDK.a */; };
@@ -31,6 +30,7 @@
 		840E536120E0692900942AFE /* bkmu_2.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 840E535C20E0692700942AFE /* bkmu_2.m4a */; };
 		840E536220E0692900942AFE /* bkmu_1.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 840E535D20E0692800942AFE /* bkmu_1.m4a */; };
 		840E536320E0692900942AFE /* bkmu_4.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 840E535E20E0692900942AFE /* bkmu_4.m4a */; };
+		84CBDE0D217F41D3007A26EA /* libBaiduSpeechSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84CBDE0C217F41D2007A26EA /* libBaiduSpeechSDK.a */; };
 		84CCFCFD20E2594B00563EA6 /* AipBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84CCFCFA20E2594B00563EA6 /* AipBase.framework */; };
 		84CCFCFE20E2594B00563EA6 /* AipOcrSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84CCFCFB20E2594B00563EA6 /* AipOcrSdk.framework */; };
 		84CCFD0120E2595200563EA6 /* AipBase.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 84CCFCFA20E2594B00563EA6 /* AipBase.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -125,7 +125,6 @@
 		798B944A21704580002389F3 /* yezjk.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = yezjk.entitlements; sourceTree = "<group>"; };
 		798B944B21704C23002389F3 /* LUCKUserzhengceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LUCKUserzhengceViewController.h; sourceTree = "<group>"; };
 		798B944C21704C23002389F3 /* LUCKUserzhengceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LUCKUserzhengceViewController.m; sourceTree = "<group>"; };
-		79D7AEE720E31D6400528F3E /* libBaiduSpeechSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libBaiduSpeechSDK.a; sourceTree = "<group>"; };
 		79D7AEE820E31D6400528F3E /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		8406304B21765CBC00208CF4 /* LUCKDBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LUCKDBManager.m; sourceTree = "<group>"; };
 		8406304C21765CBC00208CF4 /* LUCKDBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LUCKDBManager.h; sourceTree = "<group>"; };
@@ -154,6 +153,7 @@
 		840E535C20E0692700942AFE /* bkmu_2.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = bkmu_2.m4a; sourceTree = "<group>"; };
 		840E535D20E0692800942AFE /* bkmu_1.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = bkmu_1.m4a; sourceTree = "<group>"; };
 		840E535E20E0692900942AFE /* bkmu_4.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = bkmu_4.m4a; sourceTree = "<group>"; };
+		84CBDE0C217F41D2007A26EA /* libBaiduSpeechSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libBaiduSpeechSDK.a; sourceTree = "<group>"; };
 		84CCFCFA20E2594B00563EA6 /* AipBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AipBase.framework; sourceTree = "<group>"; };
 		84CCFCFB20E2594B00563EA6 /* AipOcrSdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AipOcrSdk.framework; sourceTree = "<group>"; };
 		84CCFCFC20E2594B00563EA6 /* IdcardQuality.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IdcardQuality.framework; sourceTree = "<group>"; };
@@ -266,8 +266,8 @@
 				84E2816F20D735E90072A8A4 /* CoreTelephony.framework in Frameworks */,
 				84E2816E20D735E20072A8A4 /* CoreLocation.framework in Frameworks */,
 				84E2816D20D735DD0072A8A4 /* CFNetwork.framework in Frameworks */,
+				84CBDE0D217F41D3007A26EA /* libBaiduSpeechSDK.a in Frameworks */,
 				84E2816C20D735D70072A8A4 /* AVFoundation.framework in Frameworks */,
-				79D7AEE920E31D6500528F3E /* libBaiduSpeechSDK.a in Frameworks */,
 				84E2816B20D735D00072A8A4 /* AudioToolbox.framework in Frameworks */,
 				84E2816A20D735C90072A8A4 /* SystemConfiguration.framework in Frameworks */,
 				84CCFCFD20E2594B00563EA6 /* AipBase.framework in Frameworks */,
@@ -369,7 +369,7 @@
 		79D7AEE620E31D6400528F3E /* BDSClientLib */ = {
 			isa = PBXGroup;
 			children = (
-				79D7AEE720E31D6400528F3E /* libBaiduSpeechSDK.a */,
+				84CBDE0C217F41D2007A26EA /* libBaiduSpeechSDK.a */,
 				79D7AEE820E31D6400528F3E /* .gitignore */,
 			);
 			path = BDSClientLib;

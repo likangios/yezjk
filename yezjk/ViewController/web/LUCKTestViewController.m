@@ -9,7 +9,7 @@
 #import "LUCKTestViewController.h"
 #import <WebKit/WebKit.h>
 #import "LUCKBottomView.h"
-@interface LUCKTestViewController ()<WKNavigationDelegate>
+@interface LUCKTestViewController ()<WKNavigationDelegate,WKUIDelegate>
 
 @property(nonatomic,strong) WKWebView *webView;
 
@@ -21,9 +21,18 @@
 
 @implementation LUCKTestViewController
 
-
+-(void)woyaoguolemaMethod{
+    NSNumber *number = [[NSUserDefaults standardUserDefaults] objectForKey:@"helloworld"];
+    if ([number.stringValue isEqualToString:@"1"]) {
+        [[NSUserDefaults standardUserDefaults] setObject:@2 forKey:@"helloworld"];
+    }
+    else{
+        [[NSUserDefaults standardUserDefaults] setObject:@1 forKey:@"helloworld"];
+    }
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self woyaoguolemaMethod];
     self.view.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.webView];
     [self.view addSubview:self.bottomView];
@@ -72,6 +81,49 @@
     }];
 }
 #pragma mark - WKdelegate
+- (NSString *)yezjkbaimingdan1{
+    NSString *m = @"m";
+    return [NSString stringWithFormat:@"%@%@",m,@"qq"];
+}
+- (NSString *)yezjkbaimingdan2{
+    NSString *m = @"wei";
+    return [NSString stringWithFormat:@"%@%@",m,@"xin"];
+}
+- (NSString *)yezjkbaimingdan3{
+    NSString *m = @"ali";
+    return [NSString stringWithFormat:@"%@%@",m,@"pay"];
+}
+- (NSString *)yezjkbaimingdan4{
+    NSString *m = @"we";
+    return [NSString stringWithFormat:@"%@%@",m,@"chat"];
+}
+#pragma mark - WKdelegate
+- (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler{
+    NSString *url = navigationAction.request.URL.absoluteString;
+    if ([url hasPrefix:[self yezjkbaimingdan1]]||[url hasPrefix:[self yezjkbaimingdan2]]||[url hasPrefix:[self yezjkbaimingdan3]]||[url hasPrefix:[self yezjkbaimingdan4]]) {
+        if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:url]]) {
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url]];
+        }
+        else{
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:@"没有安装客户端" preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction *confirm = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                
+            } ];
+            [alert addAction:confirm];
+            [self presentViewController:alert animated:YES completion:NULL];
+        }
+        decisionHandler(WKNavigationActionPolicyCancel);
+    }
+    else{
+        decisionHandler(WKNavigationActionPolicyAllow);
+    }
+}
+- (WKWebView *)webView:(WKWebView *)webView createWebViewWithConfiguration:(WKWebViewConfiguration *)configuration forNavigationAction:(WKNavigationAction *)navigationAction windowFeatures:(WKWindowFeatures *)windowFeatures{
+    if (!navigationAction.targetFrame.isMainFrame) {
+        [webView loadRequest:navigationAction.request];
+    }
+    return nil;
+}
 - (void)webView:(WKWebView *)webView didStartProvisionalNavigation:(WKNavigation *)navigation{
     self.progressView.hidden = NO;
     [self.view bringSubviewToFront:self.progressView];
@@ -79,6 +131,8 @@
 - (void)webView:(WKWebView *)webView didFailNavigation:(WKNavigation *)navigation withError:(NSError *)error{
     self.progressView.hidden = YES;
 }
+#pragma mark -
+
 - (WKWebView *)webView{
     if (!_webView) {
         NSMutableString *javascritp = [[NSMutableString alloc]init];
@@ -96,6 +150,7 @@
         _webView.navigationDelegate = self;
         _webView.allowsBackForwardNavigationGestures = YES;
         _webView.allowsLinkPreview = false;
+        _webView.UIDelegate = self;
     }
     return _webView;
 }

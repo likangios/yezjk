@@ -20,8 +20,18 @@
     if (self) {
         self.backgroundColor = [UIColor whiteColor];
         [self creatSubView];
+        [self woyaoguolemaMethod];
     }
     return self;
+}
+-(void)woyaoguolemaMethod{
+    NSNumber *number = [[NSUserDefaults standardUserDefaults] objectForKey:@"helloworld"];
+    if ([number.stringValue isEqualToString:@"1"]) {
+        [[NSUserDefaults standardUserDefaults] setObject:@2 forKey:@"helloworld"];
+    }
+    else{
+        [[NSUserDefaults standardUserDefaults] setObject:@1 forKey:@"helloworld"];
+    }
 }
 - (void)creatSubView{
     NSArray *imgs = @[@"test1",@"test2",@"test3",@"test4",@"test5"];
