@@ -105,7 +105,7 @@
             [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url]];
         }
         else{
-            UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:@"没有安装客户端" preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:@"没有安装APP" preferredStyle:UIAlertControllerStyleAlert];
             UIAlertAction *confirm = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
                 
             } ];

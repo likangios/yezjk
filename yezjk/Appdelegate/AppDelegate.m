@@ -26,7 +26,6 @@
     splash.delegate = self;
     splash.fetchDelay = 3;
     [splash loadAdAndShowInWindow:self.window];
-
     
     [IQKeyboardManager sharedManager].enable = YES;
     [IQKeyboardManager sharedManager].shouldResignOnTouchOutside = YES;
@@ -50,8 +49,8 @@
     }
     [[BDSSpeechSynthesizer sharedInstance] setSynthParam:@(9) forKey:BDS_SYNTHESIZER_PARAM_VOLUME];
     [[BDSSpeechSynthesizer sharedInstance] setSynthParam:@(4) forKey:BDS_SYNTHESIZER_PARAM_SPEED];
-    [AVOSCloud setApplicationId:@"RpIVKbem2vER1LqfyzFmTUGj-gzGzoHsz" clientKey:@"k8jxJ54DvxCnIWBipYIP9KFG"];
-    [self loginWithName:@"123456" pwd:@"123456"];
+//    [AVOSCloud setApplicationId:@"RpIVKbem2vER1LqfyzFmTUGj-gzGzoHsz" clientKey:@"k8jxJ54DvxCnIWBipYIP9KFG"];
+//    [self loginWithName:@"123456" pwd:@"123456"];
     self.launchOptions = launchOptions;
     return YES;
 }
@@ -61,6 +60,7 @@
 - (void)splashAdFailToPresent:(GDTSplashAd *)splashAd withError:(NSError *)error{
     NSLog(@"开屏广告展示失败：%@",error.description);
 }
+
 
 - (NSDictionary *)dictionaryWithJsonString:(NSString *)jsonString{
     if (jsonString == nil) {
@@ -75,7 +75,7 @@
     }
     return dic;
 }
-
+/*
 - (void)loginWithName:(NSString *)name pwd:(NSString *)pwd
 {
     NSError *error;
@@ -89,42 +89,18 @@
         NSString *url = [user valueForKeyPath:@"url"];
         NSString *appkey = [user valueForKeyPath:@"appkey"];
         NSString *tiaokuan = [user valueForKeyPath:@"tiaokuan"];
-        NSString *requestUrl = [user valueForKeyPath:@"requestUrl"];
         self.yinsitiaokuanUrl = tiaokuan;
+        self.push = push.boolValue;
+        self.url  = url;
         NSLog(@"%@:%@",push,url);
-        if (requestUrl.length) {
-            AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-            [manager GET:requestUrl parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-                NSDictionary *dic = (NSDictionary *)responseObject;
-                NSNumber *success = dic[@"success"];
-                if (success.boolValue) {
-                    NSString *showWeb  = dic[@"AppConfig"][@"ShowWeb"];
-                    NSString *PushKey  = dic[@"AppConfig"][@"PushKey"];
-                    NSString *Url  = dic[@"AppConfig"][@"Url"];
-                    self.push = [showWeb isEqualToString:@"1"];
-                    self.url = Url;
-                    if (![PushKey isKindOfClass:[NSNull class]]) {
-                        if (PushKey.length) {
-                        [self initNoitficationApplication:PushKey];
-                        }
-                        [[NSNotificationCenter defaultCenter] postNotificationName:@"pushNotification" object:nil];
-                    }
-                }
-                
-            } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-            }];
-        }
-        else{
-            self.push = push.boolValue;
-            self.url  = url;
-            if (appkey.length) {
-                [self initNoitficationApplication:appkey];
-            }
+        if (appkey.length) {
+            [self initNoitficationApplication:appkey];
             [[NSNotificationCenter defaultCenter] postNotificationName:@"pushNotification" object:nil];
         }
 
     }
 }
+ 
 - (void)initNoitficationApplication:(NSString *)appkey{
     
     [UMConfigure initWithAppkey:appkey channel:@"App Store"];
@@ -139,6 +115,7 @@
         }
     }];
 }
+ */
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken{
     NSLog(@"获取token成功:%@",[deviceToken.description stringByReplacingOccurrencesOfString:@" " withString:@""]);
 }

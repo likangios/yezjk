@@ -65,15 +65,10 @@
         [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:app.yinsitiaokuanUrl]]];
     }
     [[self.confirmButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
-        [MBProgressHUD hideHUD];
         [self dismissViewControllerAnimated:YES completion:NULL];
     }];
 }
 
-- (void)webView:(WKWebView *)webView didStartProvisionalNavigation:(null_unspecified WKNavigation *)navigation{
-    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-//    [SVProgressHUD show];
-}
 - (void)webView:(WKWebView *)webView didFinishNavigation:(null_unspecified WKNavigation *)navigation{
     //顶部 下载APP
     [webView evaluateJavaScript:@"document.getElementsByClassName('header-wrap')[0].style.display = 'none'" completionHandler:^(id _Nullable obj, NSError * _Nullable error) {
@@ -94,7 +89,8 @@
     [webView evaluateJavaScript:@"document.getElementsByClassName('open-app-btn')[0].style.display = 'none'" completionHandler:^(id _Nullable obj, NSError * _Nullable error) {
         
     }];
-    [MBProgressHUD hideHUDForView:self.view animated:YES];
+
+
 //    [SVProgressHUD dismiss];
     
 }
