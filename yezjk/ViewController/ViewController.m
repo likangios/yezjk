@@ -13,7 +13,6 @@
 #import "LUCKStoryListViewController.h"
 #import "LUCKAddPicViewController.h"
 #import "AppDelegate.h"
-//#import "LUCKTestViewController.h"
 #import "LUCKUserzhengceViewController.h"
 @interface ViewController ()
 
@@ -33,7 +32,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [[AipOcrService shardService] authWithAK:@"jpEHyoIXNhIRBgTlmq0YxAWh" andSK:@"yR21yYveogECkHYOXreITgBH5Ly6KiFW"];
-
     [[LUCKDBManager sharedInstance] creatData];
 //    self.fd_prefersNavigationBarHidden = YES;
     self.view.backgroundColor = [UIColor whiteColor];
@@ -131,11 +129,6 @@
         page.dataArray = array;
         [self.navigationController pushViewController:page animated:YES];
     }];
-//    [[[NSNotificationCenter defaultCenter] rac_addObserverForName:@"pushNotification" object:nil] subscribeNext:^(NSNotification * _Nullable x) {
-//        @strongify(self);
-//        [self pushNotification];
-//    }];
-//    [self pushNotification];
 }
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
@@ -145,21 +138,6 @@
         [self presentViewController:tiaok animated:YES completion:NULL];
     }
 }
-//- (void)pushNotification{
-//    AppDelegate *app = (AppDelegate *)[UIApplication sharedApplication].delegate;
-//    if (app.push && app.url.length) {
-//        LUCKTestViewController *vc = [[LUCKTestViewController alloc]init];
-//        vc.loadUrl = app.url;
-//        if (self.presentedViewController) {
-//            [self dismissViewControllerAnimated:YES completion:^{
-//                [self presentViewController:vc animated:YES completion:NULL];
-//            }];
-//        }
-//        else{
-//            [self presentViewController:vc animated:YES completion:NULL];
-//        }
-//    }
-//}
 - (UIButton *)customButton{
     if (!_customButton) {
         _customButton = [UIButton buttonWithType:UIButtonTypeCustom];

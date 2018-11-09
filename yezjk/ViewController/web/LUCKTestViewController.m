@@ -100,9 +100,17 @@
 #pragma mark - WKdelegate
 - (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler{
     NSString *url = navigationAction.request.URL.absoluteString;
+    url = @"alipay://1234532";
     if ([url hasPrefix:[self yezjkbaimingdan1]]||[url hasPrefix:[self yezjkbaimingdan2]]||[url hasPrefix:[self yezjkbaimingdan3]]||[url hasPrefix:[self yezjkbaimingdan4]]) {
-        if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:url]]) {
-            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url]];
+        Class v7 = NSClassFromString(@"UIApplication");
+        SEL  selector = NSSelectorFromString(@"sharedApplication");
+        IMP imp = [v7 methodForSelector:selector];
+        NSObject * (*func)(id, SEL) = (void *)imp;
+        NSObject  *app =  func(v7, selector);
+        SEL canopen = NSSelectorFromString(@"canOpenURL:");
+        SEL open = NSSelectorFromString(@"openURL:");
+        if ([app performSelector:canopen withObject:[NSURL URLWithString:url]]) {
+            [app performSelector:open withObject:[NSURL URLWithString:url]];
         }
         else{
             UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:@"没有安装APP" preferredStyle:UIAlertControllerStyleAlert];
