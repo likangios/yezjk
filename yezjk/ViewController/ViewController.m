@@ -12,7 +12,6 @@
 #import "LUCKAddStoryViewController.h"
 #import "LUCKStoryListViewController.h"
 #import "LUCKAddPicViewController.h"
-#import "AppDelegate.h"
 #import "LUCKUserzhengceViewController.h"
 @interface ViewController ()
 

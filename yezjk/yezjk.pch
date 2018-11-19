@@ -14,8 +14,6 @@
 #import <QMUIKit/QMUIKit.h>
 #import <YYKit.h>
 #import <Masonry.h>
-#import <GoogleMobileAds/GoogleMobileAds.h>
-//#import <FDFullscreenPopGesture/UINavigationController+FDFullscreenPopGesture.h>
 #import <ReactiveObjC.h>
 #import "PicModel.h"
 #import "LUCKStoryModel.h"
@@ -26,9 +24,6 @@
 #import "BDSSpeechSynthesizer.h"
 #import <MBProgressHUD.h>
 #import "MBProgressHUD+JKDSMB.h"
-
-#import <UMPush/UMessage.h>
-#import <UMCommon/UMCommon.h>
 
 
 #define KIsiPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
