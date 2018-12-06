@@ -21,14 +21,13 @@
 #import "PicModel.h"
 #import "LUCKStoryModel.h"
 #import "LUCKDBManager.h"
-#import <AipOcrSdk/AipOcrSdk.h>
 #import <IQKeyboardManager.h>
 #import <JQFMDB.h>
 #import "BDSSpeechSynthesizer.h"
 #import <MBProgressHUD.h>
 #import "MBProgressHUD+JKDSMB.h"
 
-#import "CRC.h"
+//#import "CRC.h"
 
 
 #define KIsiPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)

@@ -9,7 +9,6 @@
 #import "ViewController.h"
 #import "PicPageViewController.h"
 #import "PicModel.h"
-#import "LUCKAddStoryViewController.h"
 #import "LUCKStoryListViewController.h"
 #import "LUCKAddPicViewController.h"
 #import "LUCKUserzhengceViewController.h"
@@ -30,7 +29,7 @@
 @implementation ViewController
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [[AipOcrService shardService] authWithAK:@"jpEHyoIXNhIRBgTlmq0YxAWh" andSK:@"yR21yYveogECkHYOXreITgBH5Ly6KiFW"];
+//    [[AipOcrService shardService] authWithAK:@"jpEHyoIXNhIRBgTlmq0YxAWh" andSK:@"yR21yYveogECkHYOXreITgBH5Ly6KiFW"];
     [[LUCKDBManager sharedInstance] creatData];
 //    self.fd_prefersNavigationBarHidden = YES;
     self.view.backgroundColor = [UIColor whiteColor];

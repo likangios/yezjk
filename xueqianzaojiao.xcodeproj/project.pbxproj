@@ -78,7 +78,6 @@
 /* Begin PBXBuildFile section */
 		090A1C58E97D1A72B7E8BCDF /* libPods-xueqianzaojiao.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1476C986295B457391B258FF /* libPods-xueqianzaojiao.a */; };
 		798D7A8D21B9202D00379B40 /* .gitIgnore in Resources */ = {isa = PBXBuildFile; fileRef = 798D7A3921B9202C00379B40 /* .gitIgnore */; };
-		798D7A8E21B9202D00379B40 /* AipOcrSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 798D7A4E21B9202C00379B40 /* AipOcrSdk.framework */; };
 		798D7A8F21B9202D00379B40 /* bds_license.dat in Resources */ = {isa = PBXBuildFile; fileRef = 798D7A5221B9202C00379B40 /* bds_license.dat */; };
 		798D7A9021B9202D00379B40 /* bds_easr_basic_model.dat in Resources */ = {isa = PBXBuildFile; fileRef = 798D7A5321B9202C00379B40 /* bds_easr_basic_model.dat */; };
 		798D7A9121B9202D00379B40 /* bds_easr_mfe_cmvn.dat in Resources */ = {isa = PBXBuildFile; fileRef = 798D7A5421B9202C00379B40 /* bds_easr_mfe_cmvn.dat */; };
@@ -119,11 +118,9 @@
 		798D7AB421B9202D00379B40 /* Chinese_Text.dat in Resources */ = {isa = PBXBuildFile; fileRef = 798D7A7B21B9202C00379B40 /* Chinese_Text.dat */; };
 		798D7AB521B9202D00379B40 /* Chinese_Speech_Female.dat in Resources */ = {isa = PBXBuildFile; fileRef = 798D7A7C21B9202C00379B40 /* Chinese_Speech_Female.dat */; };
 		798D7AB621B9202D00379B40 /* tmp_license.dat in Resources */ = {isa = PBXBuildFile; fileRef = 798D7A7D21B9202C00379B40 /* tmp_license.dat */; };
-		798D7AB721B9202D00379B40 /* AipBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 798D7A7E21B9202C00379B40 /* AipBase.framework */; };
 		798D7AB821B9202D00379B40 /* libGDTMobSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 798D7A8821B9202C00379B40 /* libGDTMobSDK.a */; };
 		798D7AB921B9202D00379B40 /* libBaiduSpeechSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 798D7A8A21B9202C00379B40 /* libBaiduSpeechSDK.a */; };
 		798D7ABA21B9202D00379B40 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 798D7A8B21B9202C00379B40 /* .gitignore */; };
-		798D7ABB21B9202D00379B40 /* IdcardQuality.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 798D7A8C21B9202C00379B40 /* IdcardQuality.framework */; };
 		798D7AC721B9215000379B40 /* getClassName.sh in Resources */ = {isa = PBXBuildFile; fileRef = 798D7ABE21B9214F00379B40 /* getClassName.sh */; };
 		798D7AC821B9215000379B40 /* confuse.sh in Resources */ = {isa = PBXBuildFile; fileRef = 798D7ABF21B9214F00379B40 /* confuse.sh */; };
 		798D7AC921B9215000379B40 /* replace.sh in Resources */ = {isa = PBXBuildFile; fileRef = 798D7AC021B9214F00379B40 /* replace.sh */; };
@@ -134,14 +131,12 @@
 		798D7ACE21B9215000379B40 /* removeRandomMethod.sh in Resources */ = {isa = PBXBuildFile; fileRef = 798D7AC521B9214F00379B40 /* removeRandomMethod.sh */; };
 		798D7AE221B921A900379B40 /* LUCKUserzhengceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 798D7AD121B921A800379B40 /* LUCKUserzhengceViewController.m */; };
 		798D7AE321B921A900379B40 /* LUCKAddPicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 798D7AD221B921A800379B40 /* LUCKAddPicViewController.m */; };
-		798D7AE421B921A900379B40 /* LUCKAddStoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 798D7AD621B921A800379B40 /* LUCKAddStoryViewController.m */; };
 		798D7AE521B921A900379B40 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 798D7AD721B921A800379B40 /* ViewController.m */; };
 		798D7AE621B921A900379B40 /* LUCKStoryListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 798D7ADA21B921A800379B40 /* LUCKStoryListCell.m */; };
 		798D7AE721B921A900379B40 /* PicPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 798D7ADB21B921A800379B40 /* PicPageViewController.m */; };
 		798D7AE821B921A900379B40 /* PicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 798D7ADC21B921A800379B40 /* PicViewController.m */; };
 		798D7AE921B921A900379B40 /* LUCKStoryListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 798D7ADE21B921A800379B40 /* LUCKStoryListViewController.m */; };
 		798D7AEA21B921A900379B40 /* LUCKDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 798D7ADF21B921A800379B40 /* LUCKDBManager.m */; };
-		798D7AF121B922C400379B40 /* CRC.c in Sources */ = {isa = PBXBuildFile; fileRef = 798D7AEE21B922C300379B40 /* CRC.c */; };
 		840630AD217CB70A00208CF4 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840630AC217CB70900208CF4 /* AdSupport.framework */; };
 		840630AF217CB71100208CF4 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840630AE217CB71100208CF4 /* WebKit.framework */; };
 		840630B1217CB71F00208CF4 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 840630B0217CB71E00208CF4 /* libxml2.tbd */; };
@@ -207,7 +202,6 @@
 		798D7A4B21B9202C00379B40 /* BDSSynthesizerLogLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDSSynthesizerLogLevel.h; sourceTree = "<group>"; };
 		798D7A4C21B9202C00379B40 /* BDSTTSEventManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDSTTSEventManager.h; sourceTree = "<group>"; };
 		798D7A4D21B9202C00379B40 /* BDSSpeechSynthesizerErrors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDSSpeechSynthesizerErrors.h; sourceTree = "<group>"; };
-		798D7A4E21B9202C00379B40 /* AipOcrSdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AipOcrSdk.framework; sourceTree = "<group>"; };
 		798D7A5221B9202C00379B40 /* bds_license.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = bds_license.dat; sourceTree = "<group>"; };
 		798D7A5321B9202C00379B40 /* bds_easr_basic_model.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = bds_easr_basic_model.dat; sourceTree = "<group>"; };
 		798D7A5421B9202C00379B40 /* bds_easr_mfe_cmvn.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = bds_easr_mfe_cmvn.dat; sourceTree = "<group>"; };
@@ -248,7 +242,6 @@
 		798D7A7B21B9202C00379B40 /* Chinese_Text.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = Chinese_Text.dat; sourceTree = "<group>"; };
 		798D7A7C21B9202C00379B40 /* Chinese_Speech_Female.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = Chinese_Speech_Female.dat; sourceTree = "<group>"; };
 		798D7A7D21B9202C00379B40 /* tmp_license.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = tmp_license.dat; sourceTree = "<group>"; };
-		798D7A7E21B9202C00379B40 /* AipBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AipBase.framework; sourceTree = "<group>"; };
 		798D7A8021B9202C00379B40 /* GDTNativeExpressAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTNativeExpressAdView.h; sourceTree = "<group>"; };
 		798D7A8121B9202C00379B40 /* GDTMobBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTMobBannerView.h; sourceTree = "<group>"; };
 		798D7A8221B9202C00379B40 /* GDTNativeAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTNativeAd.h; sourceTree = "<group>"; };
@@ -260,7 +253,6 @@
 		798D7A8821B9202C00379B40 /* libGDTMobSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGDTMobSDK.a; sourceTree = "<group>"; };
 		798D7A8A21B9202C00379B40 /* libBaiduSpeechSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libBaiduSpeechSDK.a; sourceTree = "<group>"; };
 		798D7A8B21B9202C00379B40 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		798D7A8C21B9202C00379B40 /* IdcardQuality.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IdcardQuality.framework; sourceTree = "<group>"; };
 		798D7ABE21B9214F00379B40 /* getClassName.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = getClassName.sh; sourceTree = "<group>"; };
 		798D7ABF21B9214F00379B40 /* confuse.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = confuse.sh; sourceTree = "<group>"; };
 		798D7AC021B9214F00379B40 /* replace.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = replace.sh; sourceTree = "<group>"; };
@@ -275,7 +267,6 @@
 		798D7AD321B921A800379B40 /* PicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PicViewController.h; sourceTree = "<group>"; };
 		798D7AD421B921A800379B40 /* PicPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PicPageViewController.h; sourceTree = "<group>"; };
 		798D7AD521B921A800379B40 /* LUCKStoryListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LUCKStoryListViewController.h; sourceTree = "<group>"; };
-		798D7AD621B921A800379B40 /* LUCKAddStoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LUCKAddStoryViewController.m; sourceTree = "<group>"; };
 		798D7AD721B921A800379B40 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		798D7AD821B921A800379B40 /* LUCKDBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LUCKDBManager.h; sourceTree = "<group>"; };
 		798D7AD921B921A800379B40 /* LUCKUserzhengceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LUCKUserzhengceViewController.h; sourceTree = "<group>"; };
@@ -286,11 +277,8 @@
 		798D7ADE21B921A800379B40 /* LUCKStoryListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LUCKStoryListViewController.m; sourceTree = "<group>"; };
 		798D7ADF21B921A800379B40 /* LUCKDBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LUCKDBManager.m; sourceTree = "<group>"; };
 		798D7AE021B921A800379B40 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		798D7AE121B921A800379B40 /* LUCKAddStoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LUCKAddStoryViewController.h; sourceTree = "<group>"; };
 		798D7AEB21B9224D00379B40 /* FirstScript.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = FirstScript.sh; sourceTree = "<group>"; };
 		798D7AED21B922C300379B40 /* DecodeString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DecodeString.h; sourceTree = "<group>"; };
-		798D7AEE21B922C300379B40 /* CRC.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = CRC.c; sourceTree = "<group>"; };
-		798D7AEF21B922C400379B40 /* CRC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRC.h; sourceTree = "<group>"; };
 		798D7AF021B922C400379B40 /* codeObfuscation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = codeObfuscation.h; sourceTree = "<group>"; };
 		798D7B1021B923FD00379B40 /* DecodeStringMethod.list */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = DecodeStringMethod.list; path = xueqianzaojiao/DecodeStringMethod.list; sourceTree = SOURCE_ROOT; };
 		798D7B1121B923FD00379B40 /* DecodeStringlist.list */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = DecodeStringlist.list; path = xueqianzaojiao/DecodeStringlist.list; sourceTree = SOURCE_ROOT; };
@@ -346,14 +334,11 @@
 				84E2816D20D735DD0072A8A4 /* CFNetwork.framework in Frameworks */,
 				84E2816C20D735D70072A8A4 /* AVFoundation.framework in Frameworks */,
 				84E2816B20D735D00072A8A4 /* AudioToolbox.framework in Frameworks */,
-				798D7ABB21B9202D00379B40 /* IdcardQuality.framework in Frameworks */,
 				798D7AB921B9202D00379B40 /* libBaiduSpeechSDK.a in Frameworks */,
 				84E2816A20D735C90072A8A4 /* SystemConfiguration.framework in Frameworks */,
-				798D7A8E21B9202D00379B40 /* AipOcrSdk.framework in Frameworks */,
 				84E2816320D733390072A8A4 /* GLKit.framework in Frameworks */,
 				84E2815D20D733100072A8A4 /* libiconv.2.4.0.tbd in Frameworks */,
 				84E2816120D733240072A8A4 /* libz.1.2.5.tbd in Frameworks */,
-				798D7AB721B9202D00379B40 /* AipBase.framework in Frameworks */,
 				84E2815F20D7331B0072A8A4 /* libc++.tbd in Frameworks */,
 				84E2815920D733000072A8A4 /* libsqlite3.0.tbd in Frameworks */,
 				84E2815B20D733090072A8A4 /* libstdc++.6.0.9.tbd in Frameworks */,
@@ -388,12 +373,9 @@
 			isa = PBXGroup;
 			children = (
 				798D7A3421B9202C00379B40 /* BDSClientHeaders */,
-				798D7A4E21B9202C00379B40 /* AipOcrSdk.framework */,
 				798D7A4F21B9202C00379B40 /* BDSClientResource */,
-				798D7A7E21B9202C00379B40 /* AipBase.framework */,
 				798D7A7F21B9202C00379B40 /* lib */,
 				798D7A8921B9202C00379B40 /* BDSClientLib */,
-				798D7A8C21B9202C00379B40 /* IdcardQuality.framework */,
 			);
 			path = lib;
 			sourceTree = "<group>";
@@ -599,7 +581,6 @@
 				798D7AD321B921A800379B40 /* PicViewController.h */,
 				798D7AD421B921A800379B40 /* PicPageViewController.h */,
 				798D7AD521B921A800379B40 /* LUCKStoryListViewController.h */,
-				798D7AD621B921A800379B40 /* LUCKAddStoryViewController.m */,
 				798D7AD721B921A800379B40 /* ViewController.m */,
 				798D7AD821B921A800379B40 /* LUCKDBManager.h */,
 				798D7AD921B921A800379B40 /* LUCKUserzhengceViewController.h */,
@@ -610,7 +591,6 @@
 				798D7ADE21B921A800379B40 /* LUCKStoryListViewController.m */,
 				798D7ADF21B921A800379B40 /* LUCKDBManager.m */,
 				798D7AE021B921A800379B40 /* ViewController.h */,
-				798D7AE121B921A800379B40 /* LUCKAddStoryViewController.h */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -666,8 +646,6 @@
 				84E280D920D72F480072A8A4 /* main.m */,
 				840E535320D7C4F500942AFE /* xueqianzaojiao.pch */,
 				798D7AF021B922C400379B40 /* codeObfuscation.h */,
-				798D7AEE21B922C300379B40 /* CRC.c */,
-				798D7AEF21B922C400379B40 /* CRC.h */,
 				798D7AED21B922C300379B40 /* DecodeString.h */,
 			);
 			path = xueqianzaojiao;
@@ -997,14 +975,12 @@
 				798D7AE321B921A900379B40 /* LUCKAddPicViewController.m in Sources */,
 				798D7AE721B921A900379B40 /* PicPageViewController.m in Sources */,
 				798D7AE221B921A900379B40 /* LUCKUserzhengceViewController.m in Sources */,
-				798D7AF121B922C400379B40 /* CRC.c in Sources */,
 				798D7AE621B921A900379B40 /* LUCKStoryListCell.m in Sources */,
 				84E280DA20D72F480072A8A4 /* main.m in Sources */,
 				798D7AEA21B921A900379B40 /* LUCKDBManager.m in Sources */,
 				840E535920DF9A2E00942AFE /* LUCKStoryModel.m in Sources */,
 				84E2817220D76E260072A8A4 /* PicModel.m in Sources */,
 				84E280CC20D72F480072A8A4 /* AppDelegate.m in Sources */,
-				798D7AE421B921A900379B40 /* LUCKAddStoryViewController.m in Sources */,
 				798D7AE921B921A900379B40 /* LUCKStoryListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1256,7 +1232,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/xueqianzaojiao/lib",
 				);
-				GCC_INPUT_FILETYPE = sourcecode.c.objc;
+				GCC_INPUT_FILETYPE = automatic;
 				GCC_PREFIX_HEADER = xueqianzaojiao/xueqianzaojiao.pch;
 				INFOPLIST_FILE = xueqianzaojiao/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1287,7 +1263,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/xueqianzaojiao/lib",
 				);
-				GCC_INPUT_FILETYPE = sourcecode.c.objc;
+				GCC_INPUT_FILETYPE = automatic;
 				GCC_PREFIX_HEADER = xueqianzaojiao/xueqianzaojiao.pch;
 				INFOPLIST_FILE = xueqianzaojiao/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
