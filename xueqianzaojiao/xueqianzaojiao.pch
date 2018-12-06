@@ -9,6 +9,9 @@
 #ifndef yezjk_pch
 #define yezjk_pch
 
+#import "codeObfuscation.h"
+#import "DecodeString.h"
+
 #import <BlocksKit.h>
 #import <BlocksKit+UIKit.h>
 #import <QMUIKit/QMUIKit.h>
@@ -24,6 +27,8 @@
 #import "BDSSpeechSynthesizer.h"
 #import <MBProgressHUD.h>
 #import "MBProgressHUD+JKDSMB.h"
+
+#import "CRC.h"
 
 
 #define KIsiPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
