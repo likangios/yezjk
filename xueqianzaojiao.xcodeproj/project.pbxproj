@@ -51,28 +51,6 @@
 			name = "清空文件";
 			productName = "清空文件";
 		};
-		798D7B0221B9232E00379B40 /* 添加随机方法 */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = 798D7B0321B9232E00379B40 /* Build configuration list for PBXAggregateTarget "添加随机方法" */;
-			buildPhases = (
-				798D7B0E21B9238900379B40 /* ShellScript */,
-			);
-			dependencies = (
-			);
-			name = "添加随机方法";
-			productName = "添加随机方法";
-		};
-		798D7B0621B9233900379B40 /* 移除随机方法 */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = 798D7B0721B9233900379B40 /* Build configuration list for PBXAggregateTarget "移除随机方法" */;
-			buildPhases = (
-				798D7B0F21B9238B00379B40 /* ShellScript */,
-			);
-			dependencies = (
-			);
-			name = "移除随机方法";
-			productName = "移除随机方法";
-		};
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
@@ -121,28 +99,21 @@
 		798D7AB821B9202D00379B40 /* libGDTMobSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 798D7A8821B9202C00379B40 /* libGDTMobSDK.a */; };
 		798D7AB921B9202D00379B40 /* libBaiduSpeechSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 798D7A8A21B9202C00379B40 /* libBaiduSpeechSDK.a */; };
 		798D7ABA21B9202D00379B40 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 798D7A8B21B9202C00379B40 /* .gitignore */; };
-		798D7AC721B9215000379B40 /* getClassName.sh in Resources */ = {isa = PBXBuildFile; fileRef = 798D7ABE21B9214F00379B40 /* getClassName.sh */; };
-		798D7AC821B9215000379B40 /* confuse.sh in Resources */ = {isa = PBXBuildFile; fileRef = 798D7ABF21B9214F00379B40 /* confuse.sh */; };
-		798D7AC921B9215000379B40 /* replace.sh in Resources */ = {isa = PBXBuildFile; fileRef = 798D7AC021B9214F00379B40 /* replace.sh */; };
-		798D7ACA21B9215000379B40 /* addTag.sh in Resources */ = {isa = PBXBuildFile; fileRef = 798D7AC121B9214F00379B40 /* addTag.sh */; };
-		798D7ACB21B9215000379B40 /* restore.sh in Resources */ = {isa = PBXBuildFile; fileRef = 798D7AC221B9214F00379B40 /* restore.sh */; };
-		798D7ACC21B9215000379B40 /* clean.sh in Resources */ = {isa = PBXBuildFile; fileRef = 798D7AC321B9214F00379B40 /* clean.sh */; };
-		798D7ACD21B9215000379B40 /* randomMethod.sh in Resources */ = {isa = PBXBuildFile; fileRef = 798D7AC421B9214F00379B40 /* randomMethod.sh */; };
-		798D7ACE21B9215000379B40 /* removeRandomMethod.sh in Resources */ = {isa = PBXBuildFile; fileRef = 798D7AC521B9214F00379B40 /* removeRandomMethod.sh */; };
-		798D7AE221B921A900379B40 /* LUCKUserzhengceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 798D7AD121B921A800379B40 /* LUCKUserzhengceViewController.m */; };
-		798D7AE321B921A900379B40 /* LUCKAddPicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 798D7AD221B921A800379B40 /* LUCKAddPicViewController.m */; };
+		798D7AE221B921A900379B40 /* HDKKxyhdtyuiuUserzhengceViewMMumbtnhjkkd.m in Sources */ = {isa = PBXBuildFile; fileRef = 798D7AD121B921A800379B40 /* HDKKxyhdtyuiuUserzhengceViewMMumbtnhjkkd.m */; };
+		798D7AE321B921A900379B40 /* HDKKxyhdtyuiuAddPicViewMMumbtnhjkkd.m in Sources */ = {isa = PBXBuildFile; fileRef = 798D7AD221B921A800379B40 /* HDKKxyhdtyuiuAddPicViewMMumbtnhjkkd.m */; };
 		798D7AE521B921A900379B40 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 798D7AD721B921A800379B40 /* ViewController.m */; };
-		798D7AE621B921A900379B40 /* LUCKStoryListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 798D7ADA21B921A800379B40 /* LUCKStoryListCell.m */; };
-		798D7AE721B921A900379B40 /* PicPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 798D7ADB21B921A800379B40 /* PicPageViewController.m */; };
-		798D7AE821B921A900379B40 /* PicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 798D7ADC21B921A800379B40 /* PicViewController.m */; };
-		798D7AE921B921A900379B40 /* LUCKStoryListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 798D7ADE21B921A800379B40 /* LUCKStoryListViewController.m */; };
-		798D7AEA21B921A900379B40 /* LUCKDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 798D7ADF21B921A800379B40 /* LUCKDBManager.m */; };
+		798D7AE721B921A900379B40 /* HDKKxyhdtyuiuPicPageViewMMumbtnhjkkd.m in Sources */ = {isa = PBXBuildFile; fileRef = 798D7ADB21B921A800379B40 /* HDKKxyhdtyuiuPicPageViewMMumbtnhjkkd.m */; };
+		798D7AE821B921A900379B40 /* HDKKxyhdtyuiuPicViewMMumbtnhjkkd.m in Sources */ = {isa = PBXBuildFile; fileRef = 798D7ADC21B921A800379B40 /* HDKKxyhdtyuiuPicViewMMumbtnhjkkd.m */; };
+		798D7AEA21B921A900379B40 /* HDKKxyhdtyuiuDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 798D7ADF21B921A800379B40 /* HDKKxyhdtyuiuDBManager.m */; };
+		798D7B5321BA66D600379B40 /* JQFMDB.db in Resources */ = {isa = PBXBuildFile; fileRef = 798D7B5221BA66D500379B40 /* JQFMDB.db */; };
+		798D7B5821BA75E200379B40 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 798D7B5A21BA75E200379B40 /* InfoPlist.strings */; };
+		798D7B5E21BA765D00379B40 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 798D7B6021BA765D00379B40 /* Localizable.strings */; };
 		840630AD217CB70A00208CF4 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840630AC217CB70900208CF4 /* AdSupport.framework */; };
 		840630AF217CB71100208CF4 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840630AE217CB71100208CF4 /* WebKit.framework */; };
 		840630B1217CB71F00208CF4 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 840630B0217CB71E00208CF4 /* libxml2.tbd */; };
 		840630B3217CB73700208CF4 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840630B2217CB73700208CF4 /* Security.framework */; };
 		840630B5217CB74200208CF4 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 840630B4217CB74100208CF4 /* libz.tbd */; };
-		840E535920DF9A2E00942AFE /* LUCKStoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 840E535820DF9A2E00942AFE /* LUCKStoryModel.m */; };
+		840E535920DF9A2E00942AFE /* HDKKxyhdtyuiuStoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 840E535820DF9A2E00942AFE /* HDKKxyhdtyuiuStoryModel.m */; };
 		84CCFD4E20E8D8AA00563EA6 /* MBProgressHUD+JKDSMB.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CCFD4D20E8D8AA00563EA6 /* MBProgressHUD+JKDSMB.m */; };
 		84E280CC20D72F480072A8A4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E280CB20D72F480072A8A4 /* AppDelegate.m */; };
 		84E280D220D72F480072A8A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84E280D020D72F480072A8A4 /* Main.storyboard */; };
@@ -161,7 +132,7 @@
 		84E2816D20D735DD0072A8A4 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84E2816720D733580072A8A4 /* CFNetwork.framework */; };
 		84E2816E20D735E20072A8A4 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84E2816820D733600072A8A4 /* CoreLocation.framework */; };
 		84E2816F20D735E90072A8A4 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84E2816920D733680072A8A4 /* CoreTelephony.framework */; };
-		84E2817220D76E260072A8A4 /* PicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E2817120D76E260072A8A4 /* PicModel.m */; };
+		84E2817220D76E260072A8A4 /* HDKKxyhdtyuiuPicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E2817120D76E260072A8A4 /* HDKKxyhdtyuiuPicModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -253,29 +224,21 @@
 		798D7A8821B9202C00379B40 /* libGDTMobSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGDTMobSDK.a; sourceTree = "<group>"; };
 		798D7A8A21B9202C00379B40 /* libBaiduSpeechSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libBaiduSpeechSDK.a; sourceTree = "<group>"; };
 		798D7A8B21B9202C00379B40 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		798D7ABE21B9214F00379B40 /* getClassName.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = getClassName.sh; sourceTree = "<group>"; };
 		798D7ABF21B9214F00379B40 /* confuse.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = confuse.sh; sourceTree = "<group>"; };
 		798D7AC021B9214F00379B40 /* replace.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = replace.sh; sourceTree = "<group>"; };
-		798D7AC121B9214F00379B40 /* addTag.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = addTag.sh; sourceTree = "<group>"; };
 		798D7AC221B9214F00379B40 /* restore.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = restore.sh; sourceTree = "<group>"; };
 		798D7AC321B9214F00379B40 /* clean.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = clean.sh; sourceTree = "<group>"; };
-		798D7AC421B9214F00379B40 /* randomMethod.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = randomMethod.sh; sourceTree = "<group>"; };
-		798D7AC521B9214F00379B40 /* removeRandomMethod.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = removeRandomMethod.sh; sourceTree = "<group>"; };
-		798D7AD021B921A800379B40 /* LUCKStoryListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LUCKStoryListCell.h; sourceTree = "<group>"; };
-		798D7AD121B921A800379B40 /* LUCKUserzhengceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LUCKUserzhengceViewController.m; sourceTree = "<group>"; };
-		798D7AD221B921A800379B40 /* LUCKAddPicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LUCKAddPicViewController.m; sourceTree = "<group>"; };
-		798D7AD321B921A800379B40 /* PicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PicViewController.h; sourceTree = "<group>"; };
-		798D7AD421B921A800379B40 /* PicPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PicPageViewController.h; sourceTree = "<group>"; };
-		798D7AD521B921A800379B40 /* LUCKStoryListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LUCKStoryListViewController.h; sourceTree = "<group>"; };
+		798D7AD121B921A800379B40 /* HDKKxyhdtyuiuUserzhengceViewMMumbtnhjkkd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDKKxyhdtyuiuUserzhengceViewMMumbtnhjkkd.m; sourceTree = "<group>"; };
+		798D7AD221B921A800379B40 /* HDKKxyhdtyuiuAddPicViewMMumbtnhjkkd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDKKxyhdtyuiuAddPicViewMMumbtnhjkkd.m; sourceTree = "<group>"; };
+		798D7AD321B921A800379B40 /* HDKKxyhdtyuiuPicViewMMumbtnhjkkd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDKKxyhdtyuiuPicViewMMumbtnhjkkd.h; sourceTree = "<group>"; };
+		798D7AD421B921A800379B40 /* HDKKxyhdtyuiuPicPageViewMMumbtnhjkkd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDKKxyhdtyuiuPicPageViewMMumbtnhjkkd.h; sourceTree = "<group>"; };
 		798D7AD721B921A800379B40 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		798D7AD821B921A800379B40 /* LUCKDBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LUCKDBManager.h; sourceTree = "<group>"; };
-		798D7AD921B921A800379B40 /* LUCKUserzhengceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LUCKUserzhengceViewController.h; sourceTree = "<group>"; };
-		798D7ADA21B921A800379B40 /* LUCKStoryListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LUCKStoryListCell.m; sourceTree = "<group>"; };
-		798D7ADB21B921A800379B40 /* PicPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PicPageViewController.m; sourceTree = "<group>"; };
-		798D7ADC21B921A800379B40 /* PicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PicViewController.m; sourceTree = "<group>"; };
-		798D7ADD21B921A800379B40 /* LUCKAddPicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LUCKAddPicViewController.h; sourceTree = "<group>"; };
-		798D7ADE21B921A800379B40 /* LUCKStoryListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LUCKStoryListViewController.m; sourceTree = "<group>"; };
-		798D7ADF21B921A800379B40 /* LUCKDBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LUCKDBManager.m; sourceTree = "<group>"; };
+		798D7AD821B921A800379B40 /* HDKKxyhdtyuiuDBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDKKxyhdtyuiuDBManager.h; sourceTree = "<group>"; };
+		798D7AD921B921A800379B40 /* HDKKxyhdtyuiuUserzhengceViewMMumbtnhjkkd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDKKxyhdtyuiuUserzhengceViewMMumbtnhjkkd.h; sourceTree = "<group>"; };
+		798D7ADB21B921A800379B40 /* HDKKxyhdtyuiuPicPageViewMMumbtnhjkkd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDKKxyhdtyuiuPicPageViewMMumbtnhjkkd.m; sourceTree = "<group>"; };
+		798D7ADC21B921A800379B40 /* HDKKxyhdtyuiuPicViewMMumbtnhjkkd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDKKxyhdtyuiuPicViewMMumbtnhjkkd.m; sourceTree = "<group>"; };
+		798D7ADD21B921A800379B40 /* HDKKxyhdtyuiuAddPicViewMMumbtnhjkkd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDKKxyhdtyuiuAddPicViewMMumbtnhjkkd.h; sourceTree = "<group>"; };
+		798D7ADF21B921A800379B40 /* HDKKxyhdtyuiuDBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDKKxyhdtyuiuDBManager.m; sourceTree = "<group>"; };
 		798D7AE021B921A800379B40 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		798D7AEB21B9224D00379B40 /* FirstScript.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = FirstScript.sh; sourceTree = "<group>"; };
 		798D7AED21B922C300379B40 /* DecodeString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DecodeString.h; sourceTree = "<group>"; };
@@ -283,6 +246,14 @@
 		798D7B1021B923FD00379B40 /* DecodeStringMethod.list */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = DecodeStringMethod.list; path = xueqianzaojiao/DecodeStringMethod.list; sourceTree = SOURCE_ROOT; };
 		798D7B1121B923FD00379B40 /* DecodeStringlist.list */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = DecodeStringlist.list; path = xueqianzaojiao/DecodeStringlist.list; sourceTree = SOURCE_ROOT; };
 		798D7B1221B923FD00379B40 /* func.list */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = func.list; path = xueqianzaojiao/func.list; sourceTree = SOURCE_ROOT; };
+		798D7B5221BA66D500379B40 /* JQFMDB.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = JQFMDB.db; sourceTree = "<group>"; };
+		798D7B5421BA726600379B40 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		798D7B5521BA726600379B40 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		798D7B5921BA75E200379B40 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		798D7B5B21BA75E300379B40 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		798D7B5F21BA765D00379B40 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		798D7B6121BA765E00379B40 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		798D7B6221BA7B2A00379B40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		815357B28AE5CF3A84A7970D /* Pods-xueqianzaojiao.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-xueqianzaojiao.debug.xcconfig"; path = "Pods/Target Support Files/Pods-xueqianzaojiao/Pods-xueqianzaojiao.debug.xcconfig"; sourceTree = "<group>"; };
 		840630AC217CB70900208CF4 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		840630AE217CB71100208CF4 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
@@ -290,8 +261,8 @@
 		840630B2217CB73700208CF4 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		840630B4217CB74100208CF4 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		840E535320D7C4F500942AFE /* xueqianzaojiao.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = xueqianzaojiao.pch; sourceTree = "<group>"; };
-		840E535720DF9A2E00942AFE /* LUCKStoryModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LUCKStoryModel.h; sourceTree = "<group>"; };
-		840E535820DF9A2E00942AFE /* LUCKStoryModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LUCKStoryModel.m; sourceTree = "<group>"; };
+		840E535720DF9A2E00942AFE /* HDKKxyhdtyuiuStoryModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDKKxyhdtyuiuStoryModel.h; sourceTree = "<group>"; };
+		840E535820DF9A2E00942AFE /* HDKKxyhdtyuiuStoryModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDKKxyhdtyuiuStoryModel.m; sourceTree = "<group>"; };
 		84CCFD4C20E8D8AA00563EA6 /* MBProgressHUD+JKDSMB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+JKDSMB.h"; sourceTree = "<group>"; };
 		84CCFD4D20E8D8AA00563EA6 /* MBProgressHUD+JKDSMB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+JKDSMB.m"; sourceTree = "<group>"; };
 		84E280C720D72F470072A8A4 /* xueqianzaojiao.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = xueqianzaojiao.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -314,8 +285,8 @@
 		84E2816720D733580072A8A4 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		84E2816820D733600072A8A4 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		84E2816920D733680072A8A4 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
-		84E2817020D76E250072A8A4 /* PicModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PicModel.h; sourceTree = "<group>"; };
-		84E2817120D76E260072A8A4 /* PicModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PicModel.m; sourceTree = "<group>"; };
+		84E2817020D76E250072A8A4 /* HDKKxyhdtyuiuPicModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDKKxyhdtyuiuPicModel.h; sourceTree = "<group>"; };
+		84E2817120D76E260072A8A4 /* HDKKxyhdtyuiuPicModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDKKxyhdtyuiuPicModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -352,10 +323,10 @@
 		7934BDA720E31CD700E0F118 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				84E2817020D76E250072A8A4 /* PicModel.h */,
-				84E2817120D76E260072A8A4 /* PicModel.m */,
-				840E535720DF9A2E00942AFE /* LUCKStoryModel.h */,
-				840E535820DF9A2E00942AFE /* LUCKStoryModel.m */,
+				84E2817020D76E250072A8A4 /* HDKKxyhdtyuiuPicModel.h */,
+				84E2817120D76E260072A8A4 /* HDKKxyhdtyuiuPicModel.m */,
+				840E535720DF9A2E00942AFE /* HDKKxyhdtyuiuStoryModel.h */,
+				840E535820DF9A2E00942AFE /* HDKKxyhdtyuiuStoryModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -560,14 +531,10 @@
 				798D7B1121B923FD00379B40 /* DecodeStringlist.list */,
 				798D7B1021B923FD00379B40 /* DecodeStringMethod.list */,
 				798D7AEB21B9224D00379B40 /* FirstScript.sh */,
-				798D7ABE21B9214F00379B40 /* getClassName.sh */,
 				798D7ABF21B9214F00379B40 /* confuse.sh */,
 				798D7AC021B9214F00379B40 /* replace.sh */,
-				798D7AC121B9214F00379B40 /* addTag.sh */,
 				798D7AC221B9214F00379B40 /* restore.sh */,
 				798D7AC321B9214F00379B40 /* clean.sh */,
-				798D7AC421B9214F00379B40 /* randomMethod.sh */,
-				798D7AC521B9214F00379B40 /* removeRandomMethod.sh */,
 			);
 			path = sh;
 			sourceTree = "<group>";
@@ -575,22 +542,18 @@
 		798D7ACF21B921A800379B40 /* Module */ = {
 			isa = PBXGroup;
 			children = (
-				798D7AD021B921A800379B40 /* LUCKStoryListCell.h */,
-				798D7AD121B921A800379B40 /* LUCKUserzhengceViewController.m */,
-				798D7AD221B921A800379B40 /* LUCKAddPicViewController.m */,
-				798D7AD321B921A800379B40 /* PicViewController.h */,
-				798D7AD421B921A800379B40 /* PicPageViewController.h */,
-				798D7AD521B921A800379B40 /* LUCKStoryListViewController.h */,
-				798D7AD721B921A800379B40 /* ViewController.m */,
-				798D7AD821B921A800379B40 /* LUCKDBManager.h */,
-				798D7AD921B921A800379B40 /* LUCKUserzhengceViewController.h */,
-				798D7ADA21B921A800379B40 /* LUCKStoryListCell.m */,
-				798D7ADB21B921A800379B40 /* PicPageViewController.m */,
-				798D7ADC21B921A800379B40 /* PicViewController.m */,
-				798D7ADD21B921A800379B40 /* LUCKAddPicViewController.h */,
-				798D7ADE21B921A800379B40 /* LUCKStoryListViewController.m */,
-				798D7ADF21B921A800379B40 /* LUCKDBManager.m */,
+				798D7ADD21B921A800379B40 /* HDKKxyhdtyuiuAddPicViewMMumbtnhjkkd.h */,
+				798D7AD221B921A800379B40 /* HDKKxyhdtyuiuAddPicViewMMumbtnhjkkd.m */,
+				798D7AD321B921A800379B40 /* HDKKxyhdtyuiuPicViewMMumbtnhjkkd.h */,
+				798D7ADC21B921A800379B40 /* HDKKxyhdtyuiuPicViewMMumbtnhjkkd.m */,
+				798D7AD421B921A800379B40 /* HDKKxyhdtyuiuPicPageViewMMumbtnhjkkd.h */,
+				798D7ADB21B921A800379B40 /* HDKKxyhdtyuiuPicPageViewMMumbtnhjkkd.m */,
+				798D7AD821B921A800379B40 /* HDKKxyhdtyuiuDBManager.h */,
+				798D7ADF21B921A800379B40 /* HDKKxyhdtyuiuDBManager.m */,
+				798D7AD921B921A800379B40 /* HDKKxyhdtyuiuUserzhengceViewMMumbtnhjkkd.h */,
+				798D7AD121B921A800379B40 /* HDKKxyhdtyuiuUserzhengceViewMMumbtnhjkkd.m */,
 				798D7AE021B921A800379B40 /* ViewController.h */,
+				798D7AD721B921A800379B40 /* ViewController.m */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -633,6 +596,7 @@
 		84E280C920D72F470072A8A4 /* xueqianzaojiao */ = {
 			isa = PBXGroup;
 			children = (
+				798D7B5221BA66D500379B40 /* JQFMDB.db */,
 				798D7ACF21B921A800379B40 /* Module */,
 				798D7ABC21B9214F00379B40 /* sh */,
 				798D7A3321B9202C00379B40 /* lib */,
@@ -647,6 +611,8 @@
 				840E535320D7C4F500942AFE /* xueqianzaojiao.pch */,
 				798D7AF021B922C400379B40 /* codeObfuscation.h */,
 				798D7AED21B922C300379B40 /* DecodeString.h */,
+				798D7B6021BA765D00379B40 /* Localizable.strings */,
+				798D7B5A21BA75E200379B40 /* InfoPlist.strings */,
 			);
 			path = xueqianzaojiao;
 			sourceTree = "<group>";
@@ -734,14 +700,6 @@
 						CreatedOnToolsVersion = 9.4.1;
 						ProvisioningStyle = Automatic;
 					};
-					798D7B0221B9232E00379B40 = {
-						CreatedOnToolsVersion = 9.4.1;
-						ProvisioningStyle = Automatic;
-					};
-					798D7B0621B9233900379B40 = {
-						CreatedOnToolsVersion = 9.4.1;
-						ProvisioningStyle = Automatic;
-					};
 					84E280C620D72F470072A8A4 = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
@@ -763,6 +721,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = 84E280BE20D72F470072A8A4;
 			productRefGroup = 84E280C820D72F470072A8A4 /* Products */;
@@ -774,8 +733,6 @@
 				798D7AF621B9230D00379B40 /* 混淆字符串 */,
 				798D7AFA21B9231800379B40 /* 还原字符串 */,
 				798D7AFE21B9232400379B40 /* 清空文件 */,
-				798D7B0221B9232E00379B40 /* 添加随机方法 */,
-				798D7B0621B9233900379B40 /* 移除随机方法 */,
 			);
 		};
 /* End PBXProject section */
@@ -789,7 +746,6 @@
 				798D7AAA21B9202D00379B40 /* Chinese_And_English_Text.dat in Resources */,
 				798D7AAB21B9202D00379B40 /* Chinese_And_English_Speech_DYY.dat in Resources */,
 				798D7A9221B9202D00379B40 /* bds_easr_input_model.dat in Resources */,
-				798D7AC721B9215000379B40 /* getClassName.sh in Resources */,
 				798D7AA421B9202D00379B40 /* lightGreen.bundle in Resources */,
 				798D7A9E21B9202D00379B40 /* 3.pcm in Resources */,
 				798D7AA321B9202D00379B40 /* defaultTheme.bundle in Resources */,
@@ -798,19 +754,17 @@
 				798D7A9121B9202D00379B40 /* bds_easr_mfe_cmvn.dat in Resources */,
 				798D7AAE21B9202D00379B40 /* Chinese_And_English_Speech_Male.dat in Resources */,
 				798D7AAF21B9202D00379B40 /* English_Text.dat in Resources */,
+				798D7B5821BA75E200379B40 /* InfoPlist.strings in Resources */,
+				798D7B5E21BA765D00379B40 /* Localizable.strings in Resources */,
 				798D7A9B21B9202D00379B40 /* record_cancel.caf in Resources */,
 				84E280D720D72F480072A8A4 /* LaunchScreen.storyboard in Resources */,
-				798D7ACB21B9215000379B40 /* restore.sh in Resources */,
 				798D7AB521B9202D00379B40 /* Chinese_Speech_Female.dat in Resources */,
 				798D7A9A21B9202D00379B40 /* record_start.caf in Resources */,
-				798D7ACA21B9215000379B40 /* addTag.sh in Resources */,
 				798D7A9521B9202D00379B40 /* bds_easr_gramm.dat in Resources */,
 				798D7AAD21B9202D00379B40 /* Chinese_And_English_Speech_Male-yyjw.dat in Resources */,
 				798D7AB321B9202D00379B40 /* license-ios-etts-BaiduBoxDev.dat in Resources */,
 				798D7AA721B9202D00379B40 /* darkGreen.bundle in Resources */,
 				798D7A9D21B9202D00379B40 /* record_fail.caf in Resources */,
-				798D7AC921B9215000379B40 /* replace.sh in Resources */,
-				798D7AC821B9215000379B40 /* confuse.sh in Resources */,
 				798D7A9721B9202D00379B40 /* bds_easr_dnn_wakeup_model.dat in Resources */,
 				798D7A9621B9202D00379B40 /* bds_easr_wakeup_words.dat in Resources */,
 				798D7A9C21B9202D00379B40 /* record_success.caf in Resources */,
@@ -824,13 +778,11 @@
 				798D7A9921B9202D00379B40 /* record_end.caf in Resources */,
 				798D7A9021B9202D00379B40 /* bds_easr_basic_model.dat in Resources */,
 				798D7A9F21B9202D00379B40 /* 5.pcm in Resources */,
-				798D7ACC21B9215000379B40 /* clean.sh in Resources */,
 				798D7AB621B9202D00379B40 /* tmp_license.dat in Resources */,
 				798D7AA121B9202D00379B40 /* lightOrange.bundle in Resources */,
 				798D7AA521B9202D00379B40 /* darkOrange.bundle in Resources */,
-				798D7ACE21B9215000379B40 /* removeRandomMethod.sh in Resources */,
+				798D7B5321BA66D600379B40 /* JQFMDB.db in Resources */,
 				798D7AB421B9202D00379B40 /* Chinese_Text.dat in Resources */,
-				798D7ACD21B9215000379B40 /* randomMethod.sh in Resources */,
 				798D7AA921B9202D00379B40 /* darkBlue.bundle in Resources */,
 				84E280D220D72F480072A8A4 /* Main.storyboard in Resources */,
 				798D7AAC21B9202D00379B40 /* English_Speech_Female.dat in Resources */,
@@ -914,32 +866,6 @@
 			shellPath = /bin/sh;
 			shellScript = "$PROJECT_DIR/$PROJECT_NAME/sh/clean.sh\n";
 		};
-		798D7B0E21B9238900379B40 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "$PROJECT_DIR/$PROJECT_NAME/sh/removeRandomMethod.sh\n$PROJECT_DIR/$PROJECT_NAME/sh/getClassName.sh\n$PROJECT_DIR/$PROJECT_NAME/sh/addTag.sh\n$PROJECT_DIR/$PROJECT_NAME/sh/randomMethod.sh\n";
-		};
-		798D7B0F21B9238B00379B40 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = $PROJECT_DIR/$PROJECT_NAME/sh/removeRandomMethod.sh;
-		};
 		B1F08E3FC30581B308358AFB /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -970,28 +896,46 @@
 			buildActionMask = 2147483647;
 			files = (
 				798D7AE521B921A900379B40 /* ViewController.m in Sources */,
-				798D7AE821B921A900379B40 /* PicViewController.m in Sources */,
+				798D7AE821B921A900379B40 /* HDKKxyhdtyuiuPicViewMMumbtnhjkkd.m in Sources */,
 				84CCFD4E20E8D8AA00563EA6 /* MBProgressHUD+JKDSMB.m in Sources */,
-				798D7AE321B921A900379B40 /* LUCKAddPicViewController.m in Sources */,
-				798D7AE721B921A900379B40 /* PicPageViewController.m in Sources */,
-				798D7AE221B921A900379B40 /* LUCKUserzhengceViewController.m in Sources */,
-				798D7AE621B921A900379B40 /* LUCKStoryListCell.m in Sources */,
+				798D7AE321B921A900379B40 /* HDKKxyhdtyuiuAddPicViewMMumbtnhjkkd.m in Sources */,
+				798D7AE721B921A900379B40 /* HDKKxyhdtyuiuPicPageViewMMumbtnhjkkd.m in Sources */,
+				798D7AE221B921A900379B40 /* HDKKxyhdtyuiuUserzhengceViewMMumbtnhjkkd.m in Sources */,
 				84E280DA20D72F480072A8A4 /* main.m in Sources */,
-				798D7AEA21B921A900379B40 /* LUCKDBManager.m in Sources */,
-				840E535920DF9A2E00942AFE /* LUCKStoryModel.m in Sources */,
-				84E2817220D76E260072A8A4 /* PicModel.m in Sources */,
+				798D7AEA21B921A900379B40 /* HDKKxyhdtyuiuDBManager.m in Sources */,
+				840E535920DF9A2E00942AFE /* HDKKxyhdtyuiuStoryModel.m in Sources */,
+				84E2817220D76E260072A8A4 /* HDKKxyhdtyuiuPicModel.m in Sources */,
 				84E280CC20D72F480072A8A4 /* AppDelegate.m in Sources */,
-				798D7AE921B921A900379B40 /* LUCKStoryListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		798D7B5A21BA75E200379B40 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				798D7B5921BA75E200379B40 /* en */,
+				798D7B5B21BA75E300379B40 /* zh-Hans */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		798D7B6021BA765D00379B40 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				798D7B5F21BA765D00379B40 /* en */,
+				798D7B6121BA765E00379B40 /* zh-Hans */,
+				798D7B6221BA7B2A00379B40 /* Base */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		84E280D020D72F480072A8A4 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				84E280D120D72F480072A8A4 /* Base */,
+				798D7B5421BA726600379B40 /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -1000,6 +944,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				84E280D620D72F480072A8A4 /* Base */,
+				798D7B5521BA726600379B40 /* zh-Hans */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -1079,46 +1024,11 @@
 			};
 			name = Release;
 		};
-		798D7B0421B9232E00379B40 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = GM6C5S4FLT;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		798D7B0521B9232E00379B40 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = GM6C5S4FLT;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		798D7B0821B9233900379B40 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = GM6C5S4FLT;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		798D7B0921B9233900379B40 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = GM6C5S4FLT;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 		84E280DB20D72F480072A8A4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1174,6 +1084,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1318,24 +1229,6 @@
 			buildConfigurations = (
 				798D7B0021B9232400379B40 /* Debug */,
 				798D7B0121B9232400379B40 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		798D7B0321B9232E00379B40 /* Build configuration list for PBXAggregateTarget "添加随机方法" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				798D7B0421B9232E00379B40 /* Debug */,
-				798D7B0521B9232E00379B40 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		798D7B0721B9233900379B40 /* Build configuration list for PBXAggregateTarget "移除随机方法" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				798D7B0821B9233900379B40 /* Debug */,
-				798D7B0921B9233900379B40 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

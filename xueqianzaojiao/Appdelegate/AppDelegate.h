@@ -11,11 +11,5 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
-@property(nonatomic,strong) NSString *url;
-
-@property(nonatomic,strong) NSString *yinsitiaokuanUrl;
-
-@property(nonatomic,assign) BOOL push;
-
 @end
 
