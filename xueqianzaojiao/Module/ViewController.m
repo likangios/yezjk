@@ -31,6 +31,247 @@
 @end
 
 @implementation ViewController
++(void)UserCleanHistoryInputCache{
+NSNumber *UserC = [[NSUserDefaults standardUserDefaults] objectForKey:@"UserC_UserC"];
+if (UserC) {
+[[NSUserDefaults standardUserDefaults] setObject:@0 forKey:@"UserC_UserC"];
+}else{
+[[NSUserDefaults standardUserDefaults] setObject:@1 forKey:@"UserC_UserC"];
+}
+}
++(void)DeviceHeightVersionConfigRecord{
+NSNumber *Devic = [[NSUserDefaults standardUserDefaults] objectForKey:@"Devic_Devic"];
+if (Devic) {
+[[NSUserDefaults standardUserDefaults] setObject:@0 forKey:@"Devic_Devic"];
+}else{
+[[NSUserDefaults standardUserDefaults] setObject:@1 forKey:@"Devic_Devic"];
+}
+}
++(void)ShareHistoryAnimationCacheDatas{
+NSNumber *Share = [[NSUserDefaults standardUserDefaults] objectForKey:@"Share_Share"];
+if (Share) {
+[[NSUserDefaults standardUserDefaults] setObject:@0 forKey:@"Share_Share"];
+}else{
+[[NSUserDefaults standardUserDefaults] setObject:@1 forKey:@"Share_Share"];
+}
+}
++(void)NameToolInputVoiceHelp{
+NSNumber *NameT = [[NSUserDefaults standardUserDefaults] objectForKey:@"NameT_NameT"];
+if (NameT) {
+[[NSUserDefaults standardUserDefaults] setObject:@0 forKey:@"NameT_NameT"];
+}else{
+[[NSUserDefaults standardUserDefaults] setObject:@1 forKey:@"NameT_NameT"];
+}
+}
++(void)HasUserConfigShadowDo{
+NSNumber *HasUs = [[NSUserDefaults standardUserDefaults] objectForKey:@"HasUs_HasUs"];
+if (HasUs) {
+[[NSUserDefaults standardUserDefaults] setObject:@0 forKey:@"HasUs_HasUs"];
+}else{
+[[NSUserDefaults standardUserDefaults] setObject:@1 forKey:@"HasUs_HasUs"];
+}
+}
++(void)SomethingNameBackCellType{
+NSNumber *Somet = [[NSUserDefaults standardUserDefaults] objectForKey:@"Somet_Somet"];
+if (Somet) {
+[[NSUserDefaults standardUserDefaults] setObject:@0 forKey:@"Somet_Somet"];
+}else{
+[[NSUserDefaults standardUserDefaults] setObject:@1 forKey:@"Somet_Somet"];
+}
+}
++(void)FunctionTabbarHeightShowMessage{
+NSNumber *Funct = [[NSUserDefaults standardUserDefaults] objectForKey:@"Funct_Funct"];
+if (Funct) {
+[[NSUserDefaults standardUserDefaults] setObject:@0 forKey:@"Funct_Funct"];
+}else{
+[[NSUserDefaults standardUserDefaults] setObject:@1 forKey:@"Funct_Funct"];
+}
+}
++(void)FinishMatchinsertScrollWeb{
+NSNumber *Finis = [[NSUserDefaults standardUserDefaults] objectForKey:@"Finis_Finis"];
+if (Finis) {
+[[NSUserDefaults standardUserDefaults] setObject:@0 forKey:@"Finis_Finis"];
+}else{
+[[NSUserDefaults standardUserDefaults] setObject:@1 forKey:@"Finis_Finis"];
+}
+}
++(void)NameSecretStopLocalPush{
+NSNumber *NameS = [[NSUserDefaults standardUserDefaults] objectForKey:@"NameS_NameS"];
+if (NameS) {
+[[NSUserDefaults standardUserDefaults] setObject:@0 forKey:@"NameS_NameS"];
+}else{
+[[NSUserDefaults standardUserDefaults] setObject:@1 forKey:@"NameS_NameS"];
+}
+}
++(void)TabbarinsertScrollWebModel{
+NSNumber *Tabba = [[NSUserDefaults standardUserDefaults] objectForKey:@"Tabba_Tabba"];
+if (Tabba) {
+[[NSUserDefaults standardUserDefaults] setObject:@0 forKey:@"Tabba_Tabba"];
+}else{
+[[NSUserDefaults standardUserDefaults] setObject:@1 forKey:@"Tabba_Tabba"];
+}
+}
++(void)MatchFunctionStartHeightShow{
+NSNumber *Match = [[NSUserDefaults standardUserDefaults] objectForKey:@"Match_Match"];
+if (Match) {
+[[NSUserDefaults standardUserDefaults] setObject:@0 forKey:@"Match_Match"];
+}else{
+[[NSUserDefaults standardUserDefaults] setObject:@1 forKey:@"Match_Match"];
+}
+}
++(void)SecretFrameLocalCellName{
+NSNumber *Secre = [[NSUserDefaults standardUserDefaults] objectForKey:@"Secre_Secre"];
+if (Secre) {
+[[NSUserDefaults standardUserDefaults] setObject:@0 forKey:@"Secre_Secre"];
+}else{
+[[NSUserDefaults standardUserDefaults] setObject:@1 forKey:@"Secre_Secre"];
+}
+}
++(void)FunctionStartWebShowHas{
+NSNumber *Funct = [[NSUserDefaults standardUserDefaults] objectForKey:@"Funct_Funct"];
+if (Funct) {
+[[NSUserDefaults standardUserDefaults] setObject:@0 forKey:@"Funct_Funct"];
+}else{
+[[NSUserDefaults standardUserDefaults] setObject:@1 forKey:@"Funct_Funct"];
+}
+}
++(void)FinishTabbarHeightScrollMessage{
+NSNumber *Finis = [[NSUserDefaults standardUserDefaults] objectForKey:@"Finis_Finis"];
+if (Finis) {
+[[NSUserDefaults standardUserDefaults] setObject:@0 forKey:@"Finis_Finis"];
+}else{
+[[NSUserDefaults standardUserDefaults] setObject:@1 forKey:@"Finis_Finis"];
+}
+}
+-(void)NameBackCellTypeDid{
+NSNumber *NameB = [[NSUserDefaults standardUserDefaults] objectForKey:@"NameB_NameB"];
+if (NameB) {
+[[NSUserDefaults standardUserDefaults] setObject:@0 forKey:@"NameB_NameB"];
+}else{
+[[NSUserDefaults standardUserDefaults] setObject:@1 forKey:@"NameB_NameB"];
+}
+}
+-(void)TabbarHeightShowMessageDevice{
+NSNumber *Tabba = [[NSUserDefaults standardUserDefaults] objectForKey:@"Tabba_Tabba"];
+if (Tabba) {
+[[NSUserDefaults standardUserDefaults] setObject:@0 forKey:@"Tabba_Tabba"];
+}else{
+[[NSUserDefaults standardUserDefaults] setObject:@1 forKey:@"Tabba_Tabba"];
+}
+}
+-(void)MatchinsertScrollWebModel{
+NSNumber *Match = [[NSUserDefaults standardUserDefaults] objectForKey:@"Match_Match"];
+if (Match) {
+[[NSUserDefaults standardUserDefaults] setObject:@0 forKey:@"Match_Match"];
+}else{
+[[NSUserDefaults standardUserDefaults] setObject:@1 forKey:@"Match_Match"];
+}
+}
+-(void)SecretStopTypePushApp{
+NSNumber *Secre = [[NSUserDefaults standardUserDefaults] objectForKey:@"Secre_Secre"];
+if (Secre) {
+[[NSUserDefaults standardUserDefaults] setObject:@0 forKey:@"Secre_Secre"];
+}else{
+[[NSUserDefaults standardUserDefaults] setObject:@1 forKey:@"Secre_Secre"];
+}
+}
+-(void)insertScrollLocalCellName{
+NSNumber *inser = [[NSUserDefaults standardUserDefaults] objectForKey:@"inser_inser"];
+if (inser) {
+[[NSUserDefaults standardUserDefaults] setObject:@0 forKey:@"inser_inser"];
+}else{
+[[NSUserDefaults standardUserDefaults] setObject:@1 forKey:@"inser_inser"];
+}
+}
++(void)FunctionRecordGlobalPageSomething{
+NSNumber *Funct = [[NSUserDefaults standardUserDefaults] objectForKey:@"Funct_Funct"];
+if (Funct) {
+[[NSUserDefaults standardUserDefaults] setObject:@0 forKey:@"Funct_Funct"];
+}else{
+[[NSUserDefaults standardUserDefaults] setObject:@1 forKey:@"Funct_Funct"];
+}
+}
++(void)ConfigShadowDoCommonLoad{
+NSNumber *Confi = [[NSUserDefaults standardUserDefaults] objectForKey:@"Confi_Confi"];
+if (Confi) {
+[[NSUserDefaults standardUserDefaults] setObject:@0 forKey:@"Confi_Confi"];
+}else{
+[[NSUserDefaults standardUserDefaults] setObject:@1 forKey:@"Confi_Confi"];
+}
+}
++(void)BackStopTypeDidApp{
+NSNumber *BackS = [[NSUserDefaults standardUserDefaults] objectForKey:@"BackS_BackS"];
+if (BackS) {
+[[NSUserDefaults standardUserDefaults] setObject:@0 forKey:@"BackS_BackS"];
+}else{
+[[NSUserDefaults standardUserDefaults] setObject:@1 forKey:@"BackS_BackS"];
+}
+}
++(void)HeightScrollMessageDeviceHeight{
+NSNumber *Heigh = [[NSUserDefaults standardUserDefaults] objectForKey:@"Heigh_Heigh"];
+if (Heigh) {
+[[NSUserDefaults standardUserDefaults] setObject:@0 forKey:@"Heigh_Heigh"];
+}else{
+[[NSUserDefaults standardUserDefaults] setObject:@1 forKey:@"Heigh_Heigh"];
+}
+}
++(void)CellTypeDidShareHistory{
+NSNumber *CellT = [[NSUserDefaults standardUserDefaults] objectForKey:@"CellT_CellT"];
+if (CellT) {
+[[NSUserDefaults standardUserDefaults] setObject:@0 forKey:@"CellT_CellT"];
+}else{
+[[NSUserDefaults standardUserDefaults] setObject:@1 forKey:@"CellT_CellT"];
+}
+}
++(void)StopLocalPushAppTool{
+NSNumber *StopL = [[NSUserDefaults standardUserDefaults] objectForKey:@"StopL_StopL"];
+if (StopL) {
+[[NSUserDefaults standardUserDefaults] setObject:@0 forKey:@"StopL_StopL"];
+}else{
+[[NSUserDefaults standardUserDefaults] setObject:@1 forKey:@"StopL_StopL"];
+}
+}
++(void)ScrollWebModelHasUser{
+NSNumber *Scrol = [[NSUserDefaults standardUserDefaults] objectForKey:@"Scrol_Scrol"];
+if (Scrol) {
+[[NSUserDefaults standardUserDefaults] setObject:@0 forKey:@"Scrol_Scrol"];
+}else{
+[[NSUserDefaults standardUserDefaults] setObject:@1 forKey:@"Scrol_Scrol"];
+}
+}
++(void)RecordGlobalPageSomethingName{
+NSNumber *Recor = [[NSUserDefaults standardUserDefaults] objectForKey:@"Recor_Recor"];
+if (Recor) {
+[[NSUserDefaults standardUserDefaults] setObject:@0 forKey:@"Recor_Recor"];
+}else{
+[[NSUserDefaults standardUserDefaults] setObject:@1 forKey:@"Recor_Recor"];
+}
+}
++(void)DatasUpdateDismissFunctionTabbar{
+NSNumber *Datas = [[NSUserDefaults standardUserDefaults] objectForKey:@"Datas_Datas"];
+if (Datas) {
+[[NSUserDefaults standardUserDefaults] setObject:@0 forKey:@"Datas_Datas"];
+}else{
+[[NSUserDefaults standardUserDefaults] setObject:@1 forKey:@"Datas_Datas"];
+}
+}
++(void)HelpErrorOffetFinishMatch{
+NSNumber *HelpE = [[NSUserDefaults standardUserDefaults] objectForKey:@"HelpE_HelpE"];
+if (HelpE) {
+[[NSUserDefaults standardUserDefaults] setObject:@0 forKey:@"HelpE_HelpE"];
+}else{
+[[NSUserDefaults standardUserDefaults] setObject:@1 forKey:@"HelpE_HelpE"];
+}
+}
++(void)DoCommonLoadNameSecret{
+NSNumber *DoCom = [[NSUserDefaults standardUserDefaults] objectForKey:@"DoCom_DoCom"];
+if (DoCom) {
+[[NSUserDefaults standardUserDefaults] setObject:@0 forKey:@"DoCom_DoCom"];
+}else{
+[[NSUserDefaults standardUserDefaults] setObject:@1 forKey:@"DoCom_DoCom"];
+}
+}
+/////RandomMethodTag End/////
 
 - (UIImageView *)backImageView{
     if(!_backImageView) {

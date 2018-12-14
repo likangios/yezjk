@@ -28,6 +28,199 @@
 @end
 
 @implementation LUCKAddStoryViewController
+-(id)ToolInputCacheHelpUpdate:(id)arg1{
+NSSet *obj=[[NSSet alloc]init];
+return obj;
+}
+-(id)UserConfigRecordDoPage:(id)arg1{
+NSString *obj=[[NSString alloc]init];
+return obj;
+}
+-(id)CacheDatasUpdateDismissFinish:(id)arg1{
+NSArray *obj=[[NSArray alloc]init];
+return obj;
+}
+-(id)VoiceHelpErrorOffetCard:(id)arg1{
+NSSet *obj=[[NSSet alloc]init];
+return obj;
+}
+-(void)insertScrollWebModelHeight{
+NSNumber *inser = [[NSUserDefaults standardUserDefaults] objectForKey:@"inser_inser"];
+if (inser) {
+[[NSUserDefaults standardUserDefaults] setObject:@0 forKey:@"inser_inser"];
+}else{
+[[NSUserDefaults standardUserDefaults] setObject:@1 forKey:@"inser_inser"];
+}
+}
+-(void)StopTypePushAppHistory{
+NSNumber *StopT = [[NSUserDefaults standardUserDefaults] objectForKey:@"StopT_StopT"];
+if (StopT) {
+[[NSUserDefaults standardUserDefaults] setObject:@0 forKey:@"StopT_StopT"];
+}else{
+[[NSUserDefaults standardUserDefaults] setObject:@1 forKey:@"StopT_StopT"];
+}
+}
+-(void)ScrollMessageModelHeightVersion:(id)arg1{
+NSNumber *Scrol = [[NSUserDefaults standardUserDefaults] objectForKey:@"Scrol_Scrol"];
+if (Scrol) {
+[[NSUserDefaults standardUserDefaults] setObject:@0 forKey:@"Scrol_Scrol"];
+}else{
+[[NSUserDefaults standardUserDefaults] setObject:@1 forKey:@"Scrol_Scrol"];
+}
+}
+-(void)StartWebShowHasUser:(id)arg1{
+NSNumber *Start = [[NSUserDefaults standardUserDefaults] objectForKey:@"Start_Start"];
+if (Start) {
+[[NSUserDefaults standardUserDefaults] setObject:@0 forKey:@"Start_Start"];
+}else{
+[[NSUserDefaults standardUserDefaults] setObject:@1 forKey:@"Start_Start"];
+}
+}
+-(id)LocalPushNameToolInput:(id)arg1{
+NSString *obj=[[NSString alloc]init];
+return obj;
+}
+-(id)WebModelHasUserConfig:(id)arg1{
+NSArray *obj=[[NSArray alloc]init];
+return obj;
+}
+-(id)HeightShowMessageDeviceHeight:(id)arg1{
+NSSet *obj=[[NSSet alloc]init];
+return obj;
+}
+-(id)CellNameDidShareHistory:(id)arg1{
+NSArray *obj=[[NSArray alloc]init];
+return obj;
+}
+-(void)ShowHasFinishMatchinsert{
+NSNumber *ShowH = [[NSUserDefaults standardUserDefaults] objectForKey:@"ShowH_ShowH"];
+if (ShowH) {
+[[NSUserDefaults standardUserDefaults] setObject:@0 forKey:@"ShowH_ShowH"];
+}else{
+[[NSUserDefaults standardUserDefaults] setObject:@1 forKey:@"ShowH_ShowH"];
+}
+}
+-(void)CommonLoadLayerSecretStop{
+NSNumber *Commo = [[NSUserDefaults standardUserDefaults] objectForKey:@"Commo_Commo"];
+if (Commo) {
+[[NSUserDefaults standardUserDefaults] setObject:@0 forKey:@"Commo_Commo"];
+}else{
+[[NSUserDefaults standardUserDefaults] setObject:@1 forKey:@"Commo_Commo"];
+}
+}
+-(void)RecordGlobalPageSomethingFrame{
+NSNumber *Recor = [[NSUserDefaults standardUserDefaults] objectForKey:@"Recor_Recor"];
+if (Recor) {
+[[NSUserDefaults standardUserDefaults] setObject:@0 forKey:@"Recor_Recor"];
+}else{
+[[NSUserDefaults standardUserDefaults] setObject:@1 forKey:@"Recor_Recor"];
+}
+}
+-(void)DatasCardDismissFunctionStart:(id)arg1{
+NSNumber *Datas = [[NSUserDefaults standardUserDefaults] objectForKey:@"Datas_Datas"];
+if (Datas) {
+[[NSUserDefaults standardUserDefaults] setObject:@0 forKey:@"Datas_Datas"];
+}else{
+[[NSUserDefaults standardUserDefaults] setObject:@1 forKey:@"Datas_Datas"];
+}
+}
+-(void)GlobalLayerSomethingFrameLocal:(id)arg1{
+NSNumber *Globa = [[NSUserDefaults standardUserDefaults] objectForKey:@"Globa_Globa"];
+if (Globa) {
+[[NSUserDefaults standardUserDefaults] setObject:@0 forKey:@"Globa_Globa"];
+}else{
+[[NSUserDefaults standardUserDefaults] setObject:@1 forKey:@"Globa_Globa"];
+}
+}
+-(void)NameToolInputVoiceHelp{
+NSNumber *NameT = [[NSUserDefaults standardUserDefaults] objectForKey:@"NameT_NameT"];
+if (NameT) {
+[[NSUserDefaults standardUserDefaults] setObject:@0 forKey:@"NameT_NameT"];
+}else{
+[[NSUserDefaults standardUserDefaults] setObject:@1 forKey:@"NameT_NameT"];
+}
+}
+-(void)TypeDidShareHistoryAnimation{
+NSNumber *TypeD = [[NSUserDefaults standardUserDefaults] objectForKey:@"TypeD_TypeD"];
+if (TypeD) {
+[[NSUserDefaults standardUserDefaults] setObject:@0 forKey:@"TypeD_TypeD"];
+}else{
+[[NSUserDefaults standardUserDefaults] setObject:@1 forKey:@"TypeD_TypeD"];
+}
+}
+-(void)MessageDeviceCleanVersionSystem{
+NSNumber *Messa = [[NSUserDefaults standardUserDefaults] objectForKey:@"Messa_Messa"];
+if (Messa) {
+[[NSUserDefaults standardUserDefaults] setObject:@0 forKey:@"Messa_Messa"];
+}else{
+[[NSUserDefaults standardUserDefaults] setObject:@1 forKey:@"Messa_Messa"];
+}
+}
+-(void)DidShareVoiceAnimationError{
+NSNumber *DidSh = [[NSUserDefaults standardUserDefaults] objectForKey:@"DidSh_DidSh"];
+if (DidSh) {
+[[NSUserDefaults standardUserDefaults] setObject:@0 forKey:@"DidSh_DidSh"];
+}else{
+[[NSUserDefaults standardUserDefaults] setObject:@1 forKey:@"DidSh_DidSh"];
+}
+}
+-(void)PushAppToolInputCache{
+NSNumber *PushA = [[NSUserDefaults standardUserDefaults] objectForKey:@"PushA_PushA"];
+if (PushA) {
+[[NSUserDefaults standardUserDefaults] setObject:@0 forKey:@"PushA_PushA"];
+}else{
+[[NSUserDefaults standardUserDefaults] setObject:@1 forKey:@"PushA_PushA"];
+}
+}
+-(void)ModelHeightUserConfigRecord{
+NSNumber *Model = [[NSUserDefaults standardUserDefaults] objectForKey:@"Model_Model"];
+if (Model) {
+[[NSUserDefaults standardUserDefaults] setObject:@0 forKey:@"Model_Model"];
+}else{
+[[NSUserDefaults standardUserDefaults] setObject:@1 forKey:@"Model_Model"];
+}
+}
+-(void)AppHistoryInputCacheShadow:(id)arg1{
+NSNumber *AppHi = [[NSUserDefaults standardUserDefaults] objectForKey:@"AppHi_AppHi"];
+if (AppHi) {
+[[NSUserDefaults standardUserDefaults] setObject:@0 forKey:@"AppHi_AppHi"];
+}else{
+[[NSUserDefaults standardUserDefaults] setObject:@1 forKey:@"AppHi_AppHi"];
+}
+}
+-(void)NameToolShareVoiceHelp:(id)arg1{
+NSNumber *NameT = [[NSUserDefaults standardUserDefaults] objectForKey:@"NameT_NameT"];
+if (NameT) {
+[[NSUserDefaults standardUserDefaults] setObject:@0 forKey:@"NameT_NameT"];
+}else{
+[[NSUserDefaults standardUserDefaults] setObject:@1 forKey:@"NameT_NameT"];
+}
+}
+-(void)HasUserCleanShadowDo:(id)arg1{
+NSNumber *HasUs = [[NSUserDefaults standardUserDefaults] objectForKey:@"HasUs_HasUs"];
+if (HasUs) {
+[[NSUserDefaults standardUserDefaults] setObject:@0 forKey:@"HasUs_HasUs"];
+}else{
+[[NSUserDefaults standardUserDefaults] setObject:@1 forKey:@"HasUs_HasUs"];
+}
+}
+-(id)ToolDeviceHeightVersionSystem:(id)arg1{
+NSSet *obj=[[NSSet alloc]init];
+return obj;
+}
+-(id)DidShareHistoryAnimationError:(id)arg1{
+NSArray *obj=[[NSArray alloc]init];
+return obj;
+}
+-(id)DeviceCleanVersionSystemRecord:(id)arg1{
+NSSet *obj=[[NSSet alloc]init];
+return obj;
+}
++(id)ModelHeightUserConfigShadow:(id)arg1{
+NSString *obj=[[NSString alloc]init];
+return obj;
+}
+/////RandomMethodTag End/////
 
 - (void)viewDidLoad {
     [super viewDidLoad];

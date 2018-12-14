@@ -8,9 +8,10 @@
 
 #import "AppDelegate.h"
 #import "BDSSpeechSynthesizer.h"
-#import <AFNetworking.h>
 #import "GDTSplashAd.h"
 @interface AppDelegate ()<GDTSplashAdDelegate>
+
+@property(nonatomic,assign) NSInteger rate;
 
 
 @end
@@ -19,7 +20,6 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-
     [self initGDTSDK];
     [self initIQKLib];
     [self initBDSSpeechSDK];
