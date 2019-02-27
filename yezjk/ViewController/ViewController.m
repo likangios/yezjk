@@ -33,7 +33,6 @@
     [super viewDidLoad];
     [[AipOcrService shardService] authWithAK:@"jpEHyoIXNhIRBgTlmq0YxAWh" andSK:@"yR21yYveogECkHYOXreITgBH5Ly6KiFW"];
     [[LUCKDBManager sharedInstance] creatData];
-//    self.fd_prefersNavigationBarHidden = YES;
     self.view.backgroundColor = [UIColor whiteColor];
     
     UIImageView *imageview= [[ UIImageView alloc]init];
